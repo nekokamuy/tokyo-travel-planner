@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d4f55" />
+    <meta
+      name="description"
+      content="東京旅行的共享行程、地圖與旅遊資訊。"
+    />
+    <title>東京旅遊計畫</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <nav class="nav container" aria-label="主要導覽">
+        <a class="brand" href="#top">TOKYO <span>2026</span></a>
+        <a class="nav-link" href="#itinerary">行程</a>
+      </nav>
+      <div class="container hero-content">
+        <p class="eyebrow">SHARED TRAVEL GUIDE</p>
+        <h1>東京，一起出發。</h1>
+        <p class="hero-copy">把每日安排、集合地點與實用連結都放在這裡。</p>
+        <div class="trip-meta" aria-label="旅行基本資訊">
+          <div><span>日期</span><strong>2026.00.00 — 00.00</strong></div>
+          <div><span>旅伴</span><strong>待填寫</strong></div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="container quick-links" aria-label="快速連結">
+        <a href="#itinerary"><span>01</span>每日行程</a>
+        <a href="#essentials"><span>02</span>旅途備忘</a>
+        <a href="https://www.google.com/maps" target="_blank" rel="noreferrer"><span>03</span>開啟地圖 ↗</a>
+      </section>
+
+      <section class="container section" id="itinerary">
+        <div class="section-heading">
+          <p class="eyebrow">ITINERARY</p>
+          <h2>每日行程</h2>
+          <p>點選日期查看安排。以下內容為範例，請依實際旅行計畫修改。</p>
+        </div>
+        <div class="day-list">
+          <details class="day-card" open>
+            <summary><span class="day-number">DAY 01</span><span><strong>抵達東京</strong><small>機場 → 飯店 → 晚餐</small></span><span class="chevron">⌄</span></summary>
+            <div class="schedule">
+              <div><time>14:00</time><p><strong>抵達與入境</strong>確認網路、交通卡與集合資訊。</p></div>
+              <div><time>17:00</time><p><strong>飯店 Check-in</strong><a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Station" target="_blank" rel="noreferrer">查看地圖 ↗</a></p></div>
+              <div><time>19:00</time><p><strong>晚餐</strong>請填寫餐廳名稱與訂位資訊。</p></div>
+            </div>
+          </details>
+          <details class="day-card">
+            <summary><span class="day-number">DAY 02</span><span><strong>城市漫遊</strong><small>請填寫當日區域與景點</small></span><span class="chevron">⌄</span></summary>
+            <div class="schedule"><div><time>09:30</time><p><strong>早晨行程</strong>在此填寫景點、集合位置和提醒事項。</p></div><div><time>13:00</time><p><strong>午餐</strong>請填寫餐廳名稱。</p></div><div><time>15:00</time><p><strong>下午行程</strong>請填寫景點與交通方式。</p></div></div>
+          </details>
+          <details class="day-card">
+            <summary><span class="day-number">DAY 03</span><span><strong>自由探索</strong><small>請填寫當日區域與景點</small></span><span class="chevron">⌄</span></summary>
+            <div class="schedule"><div><time>10:00</time><p><strong>今日安排</strong>請填寫行程內容。</p></div></div>
+          </details>
+        </div>
+      </section>
+
+      <section class="essentials" id="essentials">
+        <div class="container">
+          <div class="section-heading"><p class="eyebrow">ESSENTIALS</p><h2>旅途備忘</h2></div>
+          <div class="info-grid">
+            <article><span class="icon">⌂</span><h3>住宿</h3><p>飯店名稱、地址與 Check-in 時間。</p><a href="#">待補連結</a></article>
+            <article><span class="icon">⌘</span><h3>集合</h3><p>預設集合地點：請填寫。</p><a href="https://www.google.com/maps" target="_blank" rel="noreferrer">開啟地圖 ↗</a></article>
+            <article><span class="icon">☎</span><h3>緊急聯絡</h3><p>日本緊急電話：110（警察）、119（消防／救護）。</p><a href="tel:119">撥打 119</a></article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer container"><p>東京旅遊計畫 · 請將此頁加入主畫面，旅途中更容易開啟。</p><a href="#top">回到頂端 ↑</a></footer>
+    <script src="script.js"></script>
+  </body>
+</html>
