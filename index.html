@@ -12,7 +12,15 @@
     <header class="hero" id="top">
       <nav class="nav container" aria-label="主要導覽">
         <a class="brand" href="#top">TOKYO <span>2026</span></a>
-        <a class="nav-link" href="#itinerary">行程</a>
+        <div class="menu-wrap">
+          <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="開啟導覽選單">
+            <span></span><span></span><span></span>
+          </button>
+          <div class="site-menu" id="site-menu" hidden>
+            <a href="#itinerary">每日行程</a>
+            <a href="#essentials">旅途備忘</a>
+          </div>
+        </div>
       </nav>
       <div class="container hero-content">
         <p class="eyebrow">SHARED TRAVEL GUIDE</p>
@@ -29,7 +37,6 @@
       <section class="container quick-links" aria-label="快速連結">
         <a href="#itinerary"><span>01</span>每日行程</a>
         <a href="#essentials"><span>02</span>旅途備忘</a>
-        <a href="https://www.google.com/maps" target="_blank" rel="noreferrer"><span>03</span>開啟地圖 ↗</a>
       </section>
 
       <section class="container section" id="itinerary">
@@ -39,52 +46,52 @@
           <p>點選日期展開細節。行程可依現場狀況彈性調整。</p>
         </div>
         <div class="day-list">
-          <details class="day-card" open>
+          <details class="day-card">
             <summary><span class="day-number">DAY 01 · 09/09</span><span><strong>週三｜淺草・晴空塔</strong><small>淺草寺 → 晴空塔 → Solamachi</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>下午</time><p><strong>淺草散步</strong>淺草寺、仲見世商店街、淺草文化觀光中心免費展望台；時間足夠可沿隅田川散步。<a href="https://www.google.com/maps/search/?api=1&query=Sensoji+Temple" target="_blank" rel="noreferrer">淺草寺地圖 ↗</a></p></div>
-              <div><time>晚上</time><p><strong>晴空塔與 Solamachi</strong>東京晴空塔、東京 Solamachi、吉卜力橡子共和國（Donguri Republic）與 Pokémon Center SKYTREE。<a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noreferrer">東京晴空塔地圖 ↗</a></p></div>
+              <div><time>下午</time><div class="schedule-content"><strong>淺草散步</strong><ul class="schedule-list"><li>淺草寺 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Sensoji+Temple" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>仲見世商店街 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Nakamise+Shopping+Street+Asakusa" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>淺草文化觀光中心（免費展望台） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Asakusa+Culture+Tourist+Information+Center" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>隅田川散步（視時間） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Sumida+River+Walk+Asakusa" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
+              <div><time>晚上</time><div class="schedule-content"><strong>晴空塔與 Solamachi</strong><ul class="schedule-list"><li>東京晴空塔 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Skytree" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>東京 Solamachi <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Solamachi" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>吉卜力橡子共和國（Donguri Republic） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Donguri+Republic+Tokyo+Solamachi" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Pokémon Center SKYTREE <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Pokemon+Center+Skytree+Town" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
             </div>
           </details>
 
           <details class="day-card">
             <summary><span class="day-number">DAY 02 · 09/10</span><span><strong>週四｜三鷹・澀谷・東京車站</strong><small>吉卜力美術館 → 澀谷 → Character Street</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>上午</time><p><strong>三鷹之森吉卜力美術館</strong>預計搶 10:00 場，預留約 2.5～3 小時。<a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Museum+Mitaka" target="_blank" rel="noreferrer">美術館地圖 ↗</a></p></div>
-              <div><time>下午</time><p><strong>澀谷</strong>澀谷十字路口、Loft 澀谷旗艦店；SHIBUYA SKY 建議安排夕陽時段。<a href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noreferrer">SHIBUYA SKY 地圖 ↗</a></p></div>
-              <div><time>晚上</time><p><strong>東京車站</strong>Character Street、Jump Shop（唯一保留）與東京拉麵街。<a href="https://www.google.com/maps/search/?api=1&query=Tokyo+Character+Street" target="_blank" rel="noreferrer">Character Street 地圖 ↗</a></p></div>
+              <div><time>上午</time><div class="schedule-content"><strong>三鷹之森吉卜力美術館</strong><ul class="schedule-list"><li>三鷹之森吉卜力美術館 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Ghibli+Museum+Mitaka" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>預計搶 10:00 場</li><li>預留約 2.5～3 小時</li></ul></div></div>
+              <div><time>下午</time><div class="schedule-content"><strong>澀谷</strong><ul class="schedule-list"><li>澀谷十字路口 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Scramble+Crossing" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>SHIBUYA SKY（建議夕陽時段） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Sky" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Loft 澀谷旗艦店 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Loft" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
+              <div><time>晚上</time><div class="schedule-content"><strong>東京車站</strong><ul class="schedule-list"><li>Character Street <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Character+Street" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Jump Shop（唯一保留） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Jump+Shop+Tokyo+Station" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>東京拉麵街 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Ramen+Street" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
             </div>
           </details>
 
           <details class="day-card">
             <summary><span class="day-number">DAY 03 · 09/11</span><span><strong>週五｜哈利波特影城・池袋</strong><small>Studio Tour Tokyo → Animate → Sunshine City</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>上午～下午</time><p><strong>Warner Bros. Studio Tour Tokyo</strong>哈利波特影城，預留約 4～5 小時。<a href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Studio+Tour+Tokyo" target="_blank" rel="noreferrer">影城地圖 ↗</a></p></div>
-              <div><time>傍晚～晚上</time><p><strong>池袋</strong>Animate 池袋本店（唯一保留）、Sunshine City 與 Pokémon Center MEGA TOKYO。<a href="https://www.google.com/maps/search/?api=1&query=Sunshine+City+Ikebukuro" target="_blank" rel="noreferrer">Sunshine City 地圖 ↗</a></p></div>
+              <div><time>上午～下午</time><div class="schedule-content"><strong>Warner Bros. Studio Tour Tokyo</strong><ul class="schedule-list"><li>哈利波特影城 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Warner+Bros+Studio+Tour+Tokyo" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>預留約 4～5 小時</li></ul></div></div>
+              <div><time>傍晚～晚上</time><div class="schedule-content"><strong>池袋</strong><ul class="schedule-list"><li>Animate 池袋本店（唯一保留） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Animate+Ikebukuro+Main+Store" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Sunshine City <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Sunshine+City+Ikebukuro" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Pokémon Center MEGA TOKYO <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Pokemon+Center+Mega+Tokyo" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
             </div>
           </details>
 
           <details class="day-card">
             <summary><span class="day-number">DAY 04 · 09/12</span><span><strong>週六｜河口湖一日遊</strong><small>新倉山 → 河口湖 → 大石公園</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>全天</time><p><strong>富士山景點巡禮</strong>新倉山淺間公園、河口湖、天上山公園纜車、大石公園與 Lawson 富士山拍照點。<a href="https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi" target="_blank" rel="noreferrer">河口湖地圖 ↗</a></p></div>
-              <div><time>彈性</time><p><strong>時間足夠再加</strong>忍野八海。</p></div>
+              <div><time>全天</time><div class="schedule-content"><strong>富士山景點巡禮</strong><ul class="schedule-list"><li>新倉山淺間公園 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Arakurayama+Sengen+Park" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>河口湖 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Lake+Kawaguchi" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>天上山公園纜車 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Mt+Fuji+Panoramic+Ropeway" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>大石公園 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Oishi+Park+Kawaguchiko" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Lawson 富士山拍照點 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Lawson+Kawaguchiko+Ekimae" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
+              <div><time>彈性</time><div class="schedule-content"><strong>時間足夠再加</strong><ul class="schedule-list"><li>忍野八海 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Oshino+Hakkai" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
             </div>
           </details>
 
           <details class="day-card">
             <summary><span class="day-number">DAY 05 · 09/13</span><span><strong>週日｜秋葉原・銀座</strong><small>模型玩具巡禮 → 銀座文具與選物</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>上午～下午</time><p><strong>秋葉原</strong>推薦順序：Radio Kaikan、Mandarake Complex、Surugaya、AmiAmi（★★★★★）；Yellow Submarine、Volks Hobby Paradise（★★★★☆）。<a href="https://www.google.com/maps/search/?api=1&query=Radio+Kaikan+Akihabara" target="_blank" rel="noreferrer">秋葉原地圖 ↗</a></p></div>
-              <div><time>晚上</time><p><strong>銀座</strong>伊東屋 Ginza、Ginza Six、無印良品銀座全球旗艦店。<a href="https://www.google.com/maps/search/?api=1&query=Ginza+Six" target="_blank" rel="noreferrer">Ginza Six 地圖 ↗</a></p></div>
+              <div><time>上午～下午</time><div class="schedule-content"><strong>秋葉原</strong><ul class="schedule-list"><li>Radio Kaikan（★★★★★） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Radio+Kaikan+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Mandarake Complex（★★★★★） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Mandarake+Complex+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Surugaya（★★★★★） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Surugaya+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>AmiAmi（★★★★★） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=AmiAmi+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Yellow Submarine（★★★★☆） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Yellow+Submarine+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Volks Hobby Paradise（★★★★☆） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Volks+Hobby+Paradise+Akihabara" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
+              <div><time>晚上</time><div class="schedule-content"><strong>銀座</strong><ul class="schedule-list"><li>伊東屋 Ginza（文具） <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Itoya+Ginza" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>Ginza Six <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=Ginza+Six" target="_blank" rel="noreferrer">地圖 ↗</a></li><li>無印良品銀座全球旗艦店 <a class="place-map" href="https://www.google.com/maps/search/?api=1&query=MUJI+Ginza" target="_blank" rel="noreferrer">地圖 ↗</a></li></ul></div></div>
             </div>
           </details>
 
           <details class="day-card">
             <summary><span class="day-number">DAY 06 · 09/14</span><span><strong>週一｜回家</strong><small>早餐 → Check-out → 機場</small></span><span class="chevron">⌄</span></summary>
             <div class="schedule">
-              <div><time>早上</time><p><strong>早餐與飯店 Check-out</strong>確認隨身物品與退房時間。</p></div>
-              <div><time>12:45</time><p><strong>班機返台</strong>預留足夠時間前往機場與辦理登機。</p></div>
+              <div><time>早上</time><div class="schedule-content"><strong>出發準備</strong><ul class="schedule-list"><li>早餐</li><li>飯店 Check-out</li><li>確認隨身物品與退房時間</li></ul></div></div>
+              <div><time>12:45</time><div class="schedule-content"><strong>班機返台</strong><ul class="schedule-list"><li>前往機場</li><li>辦理登機</li></ul></div></div>
             </div>
           </details>
         </div>
