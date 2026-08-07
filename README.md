@@ -14,7 +14,7 @@ python -m http.server 8000
 
 ## 發布到 GitHub Pages
 
-本專案已包含 `.github/workflows/deploy-pages.yml`。首次設定時，前往 GitHub repository 的 **Settings → Pages**，在 **Build and deployment → Source** 選擇 **GitHub Actions**。之後每次推送到 `main` 分支，就會自動發布網站。
+本專案已包含 `.github/workflows/deploy-pages.yml`。首次設定時，前往 GitHub repository 的 **Settings → Pages**，在 **Build and deployment → Source** 選擇 **GitHub Actions** 並儲存。之後每次推送到 `main` 分支，就會自動發布網站。
 
 發布完成後，網站預設網址為：
 
