@@ -32,8 +32,18 @@ document.addEventListener('keydown', (event) => {
 document.querySelectorAll('.day-card').forEach((card) => {
   card.addEventListener('toggle', () => {
     if (!card.open) return;
-    document.querySelectorAll('.day-card[open]').forEach((other) => {
+    const previouslyOpenCards = [...document.querySelectorAll('.day-card[open]')].filter(
+      (other) => other !== card,
+    );
+
+    previouslyOpenCards.forEach((other) => {
       if (other !== card) other.open = false;
     });
+
+    if (previouslyOpenCards.length) {
+      requestAnimationFrame(() => {
+        card.querySelector('summary').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
   });
 });
