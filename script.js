@@ -29,6 +29,15 @@ document.addEventListener('keydown', (event) => {
   if (event.key === 'Escape') closeMenu();
 });
 
+const backToTop = document.querySelector('.back-to-top');
+
+function updateBackToTopVisibility() {
+  backToTop.classList.toggle('is-visible', window.scrollY > 420);
+}
+
+window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+updateBackToTopVisibility();
+
 document.querySelectorAll('.day-card').forEach((card) => {
   card.addEventListener('toggle', () => {
     if (!card.open) return;
