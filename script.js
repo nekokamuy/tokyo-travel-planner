@@ -40,6 +40,14 @@ function updateNavigationState() {
   siteNav.classList.toggle('is-sticky', window.scrollY > 8);
 }
 
+function scrollToReadingPosition(element) {
+  const stickyNavHeight = siteNav.classList.contains('is-sticky') ? siteNav.offsetHeight + 16 : 0;
+  const topOffset = Math.max(window.innerHeight * 0.22, stickyNavHeight);
+  const targetTop = element.getBoundingClientRect().top + window.scrollY - topOffset;
+
+  window.scrollTo({ top: targetTop, behavior: 'smooth' });
+}
+
 window.addEventListener('scroll', () => {
   updateBackToTopVisibility();
   updateNavigationState();
@@ -86,7 +94,7 @@ document.querySelectorAll('.day-card').forEach((card) => {
 
     if (previouslyOpenCards.length) {
       requestAnimationFrame(() => {
-        card.querySelector('summary').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        scrollToReadingPosition(card.querySelector('summary'));
       });
     }
   });
