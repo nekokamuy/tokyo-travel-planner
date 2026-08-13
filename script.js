@@ -38,6 +38,20 @@ function updateBackToTopVisibility() {
 window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
 updateBackToTopVisibility();
 
+document.querySelectorAll('.ticket-return').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    const dayCard = target?.closest('.day-card');
+
+    if (dayCard) dayCard.open = true;
+
+    requestAnimationFrame(() => {
+      target?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+});
+
 document.querySelectorAll('.day-card').forEach((card) => {
   card.addEventListener('toggle', () => {
     if (!card.open) return;
