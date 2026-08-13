@@ -10,25 +10,29 @@
   </head>
   <body>
     <header class="hero" id="top">
-      <nav class="nav container" aria-label="主要導覽">
-        <a class="brand" href="#top">TOKYO <span>2026</span></a>
-        <div class="menu-wrap">
-          <button
-            class="menu-button"
-            type="button"
-            aria-expanded="false"
-            aria-controls="site-menu"
-            aria-label="開啟導覽選單"
-          >
-            <span></span><span></span><span></span>
-          </button>
-          <div class="site-menu" id="site-menu" hidden>
-            <a href="#itinerary">每日行程</a>
-            <a href="#essentials">旅途備忘</a>
-            <a href="#transit">地鐵路線圖</a>
+      <div class="nav-shell">
+        <nav class="nav container" aria-label="主要導覽">
+          <a class="brand" href="#top">TOKYO <span>2026</span></a>
+          <div class="menu-wrap">
+            <button
+              class="menu-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="site-menu"
+              aria-label="開啟導覽選單"
+            >
+              <span></span><span></span><span></span>
+            </button>
+            <div class="site-menu" id="site-menu" hidden>
+              <a href="#itinerary"><span>01</span>每日行程</a>
+              <a href="#tickets"><span>02</span>票券資訊</a>
+              <a href="#lodging"><span>03</span>住宿資訊</a>
+              <a href="#transit"><span>04</span>地鐵路線圖</a>
+              <a href="#essentials"><span>05</span>旅途備忘</a>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </div>
       <div class="container hero-content">
         <p class="eyebrow">SHARED TRAVEL GUIDE</p>
         <h1>進撃の東京旅</h1>
@@ -45,8 +49,9 @@
     <main>
       <section class="container quick-links" aria-label="快速連結">
         <a href="#itinerary"><span>01</span>每日行程</a>
-        <a href="#essentials"><span>02</span>旅途備忘</a>
-        <a href="#transit"><span>03</span>地鐵路線圖</a>
+        <a href="#tickets"><span>02</span>票券資訊</a>
+        <a href="#lodging"><span>03</span>住宿資訊</a>
+        <a href="#transit"><span>04</span>地鐵路線圖</a>
       </section>
 
       <section class="container section" id="itinerary">
@@ -204,7 +209,7 @@
                     <li id="day2-ghibli">
                       三鷹之森
                       <a class="ticket-link" href="#ticket-ghibli"
-                        >票券狀態 ↘</a
+                        >票券資訊 ↘</a
                       >
                       <a
                         class="place-map"
@@ -317,7 +322,7 @@
                     <li id="day2-tower">
                       東京鐵塔
                       <a class="ticket-link" href="#ticket-tokyo-tower"
-                        >票券狀態 ↘</a
+                        >展望台及票券資訊 ↘</a
                       >
                       <a
                         class="place-map"
@@ -328,27 +333,10 @@
                       >
                     </li>
                   </ul>
-                  <div class="option-group tower-info">
-                    <span>東京鐵塔上展望台</span>
-                    <ul class="deck-list">
-                      <li>
-                        <span class="deck-name">Main Deck（主展望台）</span>
-                        <p>
-                          150 m · 360° 東京市景、透明玻璃地板 ·
-                          <span class="rating">★★★★☆</span> 首次造訪推薦
-                        </p>
-                      </li>
-                      <li>
-                        <span class="deck-name">Top Deck（頂層展望台）</span>
-                        <p>
-                          250 m · 視野更高、人潮較少 ·
-                          <span class="rating">★★★☆☆</span> 適合追求更高視野者
-                        </p>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="option-group">
-                    <span>推薦拍攝點</span>
+                  <details class="tower-photo-details">
+                    <summary>
+                      推薦拍攝點 <span aria-hidden="true">⌄</span>
+                    </summary>
                     <ul class="schedule-list">
                       <li>
                         增上寺 <span class="rating">★★★★★</span>（經典中的經典）
@@ -406,7 +394,7 @@
                         >
                       </li>
                     </ul>
-                  </div>
+                  </details>
                 </div>
               </div>
               <div>
@@ -563,13 +551,14 @@
                   <strong>分頭行動</strong>
                   <div class="option-group">
                     <span
-                      ><span class="group-tag">里維班</span> 東京迪士尼</span
+                      ><span class="group-tag group-tag-levi">里維班</span>
+                      東京迪士尼</span
                     >
                     <ul class="schedule-list">
                       <li id="day3-disney">
                         東京迪士尼
                         <a class="ticket-link" href="#ticket-disney"
-                          >票券狀態 ↘</a
+                          >票券資訊 ↘</a
                         >
                         <a
                           class="place-map"
@@ -587,13 +576,14 @@
                   </div>
                   <div class="option-group">
                     <span
-                      ><span class="group-tag">艾連班</span> 哈利波特影城</span
+                      ><span class="group-tag group-tag-eren">艾連班</span>
+                      哈利波特影城</span
                     >
                     <ul class="schedule-list">
                       <li id="day3-harry-potter">
                         哈利波特影城
                         <a class="ticket-link" href="#ticket-harry-potter"
-                          >票券狀態 ↘</a
+                          >票券資訊 ↘</a
                         >
                         <a
                           class="place-map"
@@ -1335,198 +1325,193 @@
         </div>
       </section>
 
-      <section class="essentials" id="essentials">
+      <section class="ticket-section" id="tickets">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">ESSENTIALS</p>
-            <h2>旅途備忘</h2>
+            <p class="eyebrow">TICKETS</p>
+            <h2>票券資訊</h2>
+            <p>門票、車票與入場時間集中整理，出發前可快速確認。</p>
           </div>
-          <div class="info-grid">
-            <article>
-              <span class="icon">▣</span>
-              <h3>所需票券</h3>
-              <div class="ticket-group">
-                <h4>門票類</h4>
-                <ul class="ticket-list">
-                  <li id="ticket-ghibli">
-                    <div class="ticket-heading">
-                      <strong>三鷹之森吉卜力美術館</strong
-                      ><a class="ticket-return" href="#day2-ghibli"
-                        >回到 D2 行程 ↑</a
+          <article class="ticket-card">
+            <div class="ticket-group">
+              <h4 class="ticket-category">◫ 門票類</h4>
+              <ul class="ticket-list">
+                <li id="ticket-ghibli">
+                  <div class="ticket-heading">
+                    <strong>三鷹之森吉卜力美術館</strong
+                    ><a class="ticket-return" href="#day2-ghibli"
+                      >回到 D2 行程 ↑</a
+                    >
+                  </div>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：已購買
+                      <span
+                        class="status-mark status-purchased"
+                        role="img"
+                        aria-label="已購買"
+                        >✓</span
                       >
-                    </div>
+                    </li>
+                    <li>日期：9/10(四) 10:00場 4張</li>
+                  </ul>
+                </li>
+                <li id="ticket-tokyo-tower">
+                  <div class="ticket-heading">
+                    <strong>東京鐵塔展望台</strong
+                    ><a class="ticket-return" href="#day2-tower"
+                      >回到 D2 行程 ↑</a
+                    >
+                  </div>
+                  <ul class="ticket-meta ticket-quick-notes">
+                    <li>狀態：現場購票即可</li>
+                    <li>建議：21:00 前抵達，看夜景＋逛商店較充裕。</li>
+                  </ul>
+                  <details class="ticket-details">
+                    <summary>
+                      東京鐵塔參觀資訊 <span aria-hidden="true">⌄</span>
+                    </summary>
                     <ul class="ticket-meta">
+                      <li class="ticket-subheading">🗼 展望台資訊</li>
+                      <li>Main Deck｜150m · 09:00～23:00，最後入場 22:30</li>
+                      <li>Top Deck｜250m · 09:00～22:45，最後入場約 22:15</li>
+                      <li>Top Deck Tour 包含 Main Deck</li>
+                      <li class="ticket-subheading">🛍️ 商店資訊</li>
+                      <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
+                      <li>GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富</li>
                       <li>
-                        狀態：已購買
-                        <span
-                          class="status-mark status-purchased"
-                          role="img"
-                          aria-label="已購買"
-                          >✓</span
-                        >
+                        Foot Town 其他商店多數約 09:30～21:30，部分至
+                        22:00～22:30
                       </li>
-                      <li>日期：9/10(四) 10:00場 4張</li>
                     </ul>
-                  </li>
-                  <li id="ticket-disney">
-                    <div class="ticket-heading">
-                      <strong>迪士尼</strong
-                      ><a class="ticket-return" href="#day3-disney"
-                        >回到 D3 行程 ↑</a
+                  </details>
+                </li>
+                <li id="ticket-disney">
+                  <div class="ticket-heading">
+                    <strong>迪士尼</strong
+                    ><a class="ticket-return" href="#day3-disney"
+                      >回到 D3 行程 ↑</a
+                    >
+                  </div>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：待確認
+                      <span
+                        class="status-mark status-pending"
+                        role="img"
+                        aria-label="待確認"
+                        >!</span
                       >
-                    </div>
-                    <ul class="ticket-meta">
-                      <li>
-                        狀態：待確認
-                        <span
-                          class="status-mark status-pending"
-                          role="img"
-                          aria-label="待確認"
-                          >!</span
-                        >
-                      </li>
-                      <li>注意：確認入場日期與時段</li>
-                    </ul>
-                  </li>
-                  <li id="ticket-harry-potter">
-                    <div class="ticket-heading">
-                      <strong>哈利波特影城</strong
-                      ><a class="ticket-return" href="#day3-harry-potter"
-                        >回到 D3 行程 ↑</a
+                    </li>
+                    <li>注意：確認入場日期與時段</li>
+                  </ul>
+                </li>
+                <li id="ticket-harry-potter">
+                  <div class="ticket-heading">
+                    <strong>哈利波特影城</strong
+                    ><a class="ticket-return" href="#day3-harry-potter"
+                      >回到 D3 行程 ↑</a
+                    >
+                  </div>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：已購買
+                      <span
+                        class="status-mark status-purchased"
+                        role="img"
+                        aria-label="已購買"
+                        >✓</span
                       >
-                    </div>
-                    <ul class="ticket-meta">
-                      <li>
-                        狀態：已購買
-                        <span
-                          class="status-mark status-purchased"
-                          role="img"
-                          aria-label="已購買"
-                          >✓</span
-                        >
-                      </li>
-                      <li>日期：9/11(五) 9:00 入場</li>
-                    </ul>
-                  </li>
-                  <li id="ticket-tokyo-tower">
-                    <div class="ticket-heading">
-                      <strong>東京鐵塔展望台</strong
-                      ><a class="ticket-return" href="#day2-tower"
-                        >回到 D2 行程 ↑</a
-                      >
-                    </div>
-                    <ul class="ticket-meta ticket-quick-notes">
-                      <li>狀態：現場購票即可</li>
-                      <li>建議：21:00 前抵達，看夜景＋逛商店較充裕。</li>
-                    </ul>
-                    <details class="ticket-details">
-                      <summary>東京鐵塔參觀資訊 <span aria-hidden="true">⌄</span></summary>
-                      <ul class="ticket-meta">
-                        <li class="ticket-subheading">🗼 展望台資訊</li>
-                        <li>Main Deck｜150m · 09:00～23:00，最後入場 22:30</li>
-                        <li>Top Deck｜250m · 09:00～22:45，最後入場約 22:15</li>
-                        <li>Top Deck Tour 包含 Main Deck</li>
-                        <li class="ticket-subheading">🛍️ 商店資訊</li>
-                        <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
-                        <li>GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富</li>
-                        <li>
-                          Foot Town 其他商店多數約 09:30～21:30，部分至
-                          22:00～22:30
-                        </li>
-                      </ul>
-                    </details>
-                  </li>
-                </ul>
-              </div>
-              <div class="ticket-group">
-                <h4>車票類</h4>
-                <ul class="ticket-list">
-                  <li>
-                    <strong>機場與市區來回</strong>
-                    <ul class="ticket-meta">
-                      <li>
-                        狀態：待確認
-                        <span
-                          class="status-mark status-pending"
-                          role="img"
-                          aria-label="待確認"
-                          >!</span
-                        >
-                      </li>
-                      <li>
-                        預計：搭乘 Narita Express（N'EX）成田機場 ⇄
-                        東京車站（直達）
-                      </li>
-                      <li>
-                        注意：全車皆為指定席，可以到機場後再買，通常都有位子，但建議先買比較安心。
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <strong>鎌倉／江之島來回</strong>
-                    <ul class="ticket-meta">
-                      <li>
-                        狀態：待確認
-                        <span
-                          class="status-mark status-pending"
-                          role="img"
-                          aria-label="待確認"
-                          >!</span
-                        >
-                      </li>
-                      <li>注意：確認一日遊交通與預約需求</li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </article>
-            <article class="lodging-card">
-              <span class="icon">⌘</span>
-              <h3>住宿位置</h3>
-              <div class="lodging-entry">
-                <div class="lodging-entry-head">
-                  <span class="group-tag">艾連班</span
-                  ><span class="lodging-status">暫定</span>
-                </div>
-                <strong class="lodging-name"
-                  >karaksa hotel colors Tokyo Yaesu</strong
-                ><span class="lodging-japanese"
-                  >からくさホテルカラーズ東京八重洲</span
-                >
-                <div class="lodging-details">
-                  <p>
-                    <span>地址</span>日本東京都中央區日本橋 3-5-13（〒103-0027）
-                  </p>
-                  <p><span>電話</span>+81 3 6880 6602</p>
-                </div>
-                <a
-                  href="https://maps.app.goo.gl/cdCbgLSvks26t71LA"
-                  target="_blank"
-                  rel="noreferrer"
-                  >查看地圖 ↗</a
-                >
-              </div>
-              <div class="lodging-entry lodging-pending">
-                <div class="lodging-entry-head">
-                  <span class="group-tag">里維班</span
-                  ><span class="lodging-status">待定</span>
-                </div>
-                <p>住宿資訊待確認</p>
-              </div>
-            </article>
-            <article>
-              <span class="icon">⌂</span>
-              <h3>行前確認</h3>
-              <ul class="checklist">
-                <li>護照效期、機票與航班時間</li>
-                <li>住宿與交通票券／預約資訊</li>
-                <li>景點門票與指定入場時段</li>
-                <li>網路(eSIM)、行動電源、充電線與方塊</li>
-                <li>天氣預報、現金與信用卡</li>
-                <li>旅平險、不便險</li>
+                    </li>
+                    <li>日期：9/11(五) 9:00 入場</li>
+                  </ul>
+                </li>
               </ul>
-            </article>
+            </div>
+            <div class="ticket-group">
+              <h4 class="ticket-category">↔ 車票類</h4>
+              <ul class="ticket-list">
+                <li>
+                  <strong>機場與市區來回</strong>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：待確認
+                      <span
+                        class="status-mark status-pending"
+                        role="img"
+                        aria-label="待確認"
+                        >!</span
+                      >
+                    </li>
+                    <li>
+                      預計：搭乘 Narita Express（N'EX）成田機場 ⇄
+                      東京車站（直達）
+                    </li>
+                    <li>
+                      注意：全車皆為指定席，可以到機場後再買，通常都有位子，但建議先買比較安心。
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>鎌倉／江之島來回</strong>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：待確認
+                      <span
+                        class="status-mark status-pending"
+                        role="img"
+                        aria-label="待確認"
+                        >!</span
+                      >
+                    </li>
+                    <li>注意：確認一日遊交通與預約需求</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="lodging-section" id="lodging">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">STAY</p>
+            <h2>住宿資訊</h2>
+            <p>兩組住宿資訊與地圖集中於此，方便集合與移動時查閱。</p>
           </div>
+          <article class="lodging-card">
+            <div class="lodging-entry">
+              <div class="lodging-entry-head">
+                <span class="group-tag group-tag-eren">艾連班</span
+                ><span class="lodging-status">暫定</span>
+              </div>
+              <strong class="lodging-name"
+                >karaksa hotel colors Tokyo Yaesu</strong
+              ><span class="lodging-japanese"
+                >からくさホテルカラーズ東京八重洲</span
+              >
+              <div class="lodging-details">
+                <p>
+                  <span>地址</span>日本東京都中央區日本橋 3-5-13（〒103-0027）
+                </p>
+                <p><span>電話</span>+81 3 6880 6602</p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/cdCbgLSvks26t71LA"
+                target="_blank"
+                rel="noreferrer"
+                >查看地圖 ↗</a
+              >
+            </div>
+            <div class="lodging-entry lodging-pending">
+              <div class="lodging-entry-head">
+                <span class="group-tag group-tag-levi">里維班</span
+                ><span class="lodging-status">待定</span>
+              </div>
+              <p>住宿資訊待確認</p>
+            </div>
+          </article>
         </div>
       </section>
 
@@ -1554,6 +1539,29 @@
               ><span>JR EAST</span><strong>JR 東日本路線圖</strong
               ><small>JR East 路線圖 PDF ↗</small></a
             >
+          </div>
+        </div>
+      </section>
+
+      <section class="essentials" id="essentials">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">ESSENTIALS</p>
+            <h2>旅途備忘</h2>
+          </div>
+          <div class="info-grid info-grid-single">
+            <article>
+              <h3>行前確認</h3>
+              <ul class="checklist">
+                <li>護照效期、機票與航班時間</li>
+                <li>住宿資訊與集合方式</li>
+                <li>門票、車票與指定入場時段</li>
+                <li>網路（eSIM）、行動電源、充電線與轉接頭</li>
+                <li>出發前與旅途中確認天氣預報</li>
+                <li>準備日圓現金與可海外使用的信用卡</li>
+                <li>旅平險與不便險資料</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>

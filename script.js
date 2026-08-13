@@ -30,13 +30,22 @@ document.addEventListener('keydown', (event) => {
 });
 
 const backToTop = document.querySelector('.back-to-top');
+const siteNav = document.querySelector('.nav');
 
 function updateBackToTopVisibility() {
   backToTop.classList.toggle('is-visible', window.scrollY > 420);
 }
 
-window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+function updateNavigationState() {
+  siteNav.classList.toggle('is-sticky', window.scrollY > 8);
+}
+
+window.addEventListener('scroll', () => {
+  updateBackToTopVisibility();
+  updateNavigationState();
+}, { passive: true });
 updateBackToTopVisibility();
+updateNavigationState();
 
 document.querySelectorAll('.ticket-link').forEach((link) => {
   link.addEventListener('click', (event) => {
