@@ -38,6 +38,18 @@ function updateBackToTopVisibility() {
 window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
 updateBackToTopVisibility();
 
+document.querySelectorAll('.ticket-link').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+
+    if (!target) return;
+
+    history.replaceState(null, '', link.getAttribute('href'));
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  });
+});
+
 document.querySelectorAll('.ticket-return').forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault();
