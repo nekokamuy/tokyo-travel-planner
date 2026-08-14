@@ -73,6 +73,23 @@ document.querySelectorAll('.ticket-return').forEach((link) => {
   });
 });
 
+document.querySelectorAll('.food-reference a').forEach((link) => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    const dayCard = target?.closest('.day-card');
+
+    if (!target) return;
+
+    if (dayCard) dayCard.open = true;
+    history.replaceState(null, '', link.getAttribute('href'));
+
+    requestAnimationFrame(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  });
+});
+
 document.querySelector('.collapse-days').addEventListener('click', () => {
   document.querySelectorAll('.day-card[open]').forEach((card) => {
     card.open = false;
