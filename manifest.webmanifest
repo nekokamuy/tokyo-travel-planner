@@ -3,8 +3,12 @@
   "short_name": "東京旅行",
   "description": "2026 東京 6 天 5 夜共享旅遊行程",
   "lang": "zh-Hant",
+  "id": "./",
   "start_url": "./",
+  "scope": "./",
   "display": "standalone",
+  "orientation": "any",
+  "categories": ["travel", "utilities"],
   "background_color": "#f8f5ee",
   "theme_color": "#0d4f55",
   "icons": [

@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0d4f55" />
     <meta name="description" content="2026 東京 6 天 5 夜共享旅遊行程。" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="東京旅行" />
     <title>東京旅遊計畫｜2026</title>
     <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.svg" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -45,6 +51,9 @@
           <div><span>日期</span><strong>2026.09.09 — 09.14</strong></div>
           <div><span>天數</span><strong>6 天 5 夜</strong></div>
         </div>
+        <button class="app-install" type="button" hidden>
+          <span aria-hidden="true">↓</span> 安裝離線版
+        </button>
       </div>
     </header>
 
@@ -1797,8 +1806,10 @@
         >
       </div>
     </footer>
+    <div class="connection-status" role="status" aria-live="polite" hidden></div>
     <script src="script.js"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js"></script>
+    <script src="pwa.js"></script>
   </body>
 </html>
