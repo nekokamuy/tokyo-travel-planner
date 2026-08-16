@@ -54,7 +54,7 @@ a { color:inherit; text-underline-offset:3px; }
 @media (max-width:620px) { .install-guide { padding:25px 21px 21px; }.install-guide h2 { font-size:1.45rem; } }
 
 .coupon-section { padding:74px 0; background:#e2e9ec; }
-.coupon-filters { display:flex; gap:3px; margin:-8px 0 24px; padding:8px 0 0; overflow-x:auto; border-bottom:1px solid #bfcacc; scrollbar-width:none; }
+.coupon-filters { display:flex; gap:3px; margin:-8px 0 24px; padding:8px 0 0; overflow-x:auto; overflow-y:hidden; border-bottom:1px solid #bfcacc; scrollbar-width:none; overscroll-behavior-x:contain; touch-action:pan-x; }
 .coupon-filters::-webkit-scrollbar { display:none; }
 .coupon-filters button { flex:none; margin-bottom:-1px; padding:9px 14px; border:1px solid transparent; border-bottom-color:#bfcacc; border-radius:7px 7px 0 0; color:var(--muted); background:transparent; font:inherit; font-size:.8rem; font-weight:700; cursor:pointer; transition:color .2s,border-color .2s,background .2s; }
 .coupon-filters button:hover,.coupon-filters button:focus-visible { color:var(--teal); background:#eef3f2; }

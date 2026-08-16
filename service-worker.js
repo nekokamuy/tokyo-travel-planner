@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tokyo-travel-shell-v11';
+const CACHE_NAME = 'tokyo-travel-shell-v12';
 const APP_SHELL = ['./', './index.html', './styles.css', './script.js', './exchange-rate.js', './weather.js', './pwa.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {
