@@ -24,7 +24,7 @@
               <span></span><span></span><span></span>
             </button>
             <div class="site-menu" id="site-menu" hidden>
-              <a href="#currency"><span>00</span>匯率快算</a>
+              <a href="#currency"><span>00</span>匯率速算</a>
               <a href="#itinerary"><span>01</span>每日行程</a>
               <a href="#tickets"><span>02</span>票券資訊</a>
               <a href="#lodging"><span>03</span>住宿資訊</a>
@@ -55,11 +55,15 @@
         <a href="#transit"><span>04</span>地鐵路線圖</a>
       </section>
 
-      <section class="container currency-section" id="currency" aria-labelledby="currency-title">
+      <section
+        class="container currency-section"
+        id="currency"
+        aria-labelledby="currency-title"
+      >
         <div class="currency-card">
           <div class="currency-intro">
             <p class="eyebrow">CURRENCY CONVERTER</p>
-            <h2 id="currency-title">匯率快算</h2>
+            <h2 id="currency-title">匯率速算</h2>
             <p>輸入日圓或台幣，即時換算旅途中的預估花費。</p>
           </div>
           <div class="currency-tool" data-currency-converter>
@@ -68,26 +72,57 @@
                 <span><strong>JPY</strong> 日圓</span>
                 <span class="currency-input-wrap">
                   <span aria-hidden="true">¥</span>
-                  <input id="currency-jpy" name="jpy" type="text" inputmode="decimal" autocomplete="off" value="10,000" aria-describedby="currency-status" />
+                  <input
+                    id="currency-jpy"
+                    name="jpy"
+                    type="text"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    value="10,000"
+                    aria-describedby="currency-status"
+                  />
                 </span>
               </label>
               <span class="currency-equals" aria-hidden="true">≈</span>
               <label class="currency-field" for="currency-twd">
-                <span><strong>TWD</strong> 台幣</span>
+                <span><strong>TWD</strong> 臺幣</span>
                 <span class="currency-input-wrap">
                   <span aria-hidden="true">NT$</span>
-                  <input id="currency-twd" name="twd" type="text" inputmode="decimal" autocomplete="off" placeholder="—" aria-describedby="currency-status" />
+                  <input
+                    id="currency-twd"
+                    name="twd"
+                    type="text"
+                    inputmode="decimal"
+                    autocomplete="off"
+                    placeholder="—"
+                    aria-describedby="currency-status"
+                  />
                 </span>
               </label>
             </div>
             <div class="currency-meta">
               <div>
                 <strong id="currency-rate">正在取得最新匯率…</strong>
-                <p id="currency-status" role="status" aria-live="polite">連線後會自動保存最後可用匯率。</p>
+                <p id="currency-status" role="status" aria-live="polite">
+                  連線後會自動保存最後可用匯率。
+                </p>
               </div>
-              <button class="currency-refresh" type="button" aria-label="重新取得最新匯率">更新匯率</button>
+              <button
+                class="currency-refresh"
+                type="button"
+                aria-label="重新取得最新匯率"
+              >
+                更新匯率
+              </button>
             </div>
-            <p class="currency-disclaimer">參考匯率，不含現金買賣價及信用卡海外交易手續費。資料來源：<a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">ExchangeRate-API</a></p>
+            <p class="currency-disclaimer">
+              參考匯率，不含現金買賣價及信用卡海外交易手續費。資料來源：<a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noreferrer"
+                >ExchangeRate-API</a
+              >
+            </p>
           </div>
         </div>
       </section>
@@ -95,7 +130,10 @@
       <section class="container section" id="itinerary">
         <div class="section-heading">
           <p class="eyebrow">ITINERARY</p>
-          <div class="itinerary-title-row"><h2>每日行程</h2><button class="collapse-days" type="button">全部收合 ↑</button></div>
+          <div class="itinerary-title-row">
+            <h2>每日行程</h2>
+            <button class="collapse-days" type="button">全部收合 ↑</button>
+          </div>
           <p>點選日期展開細節。行程可依現場狀況彈性調整。</p>
         </div>
         <div class="day-list">
@@ -198,37 +236,86 @@
                     <div>
                       <span class="food-type">濃厚魚介豚骨沾麵</span
                       ><strong>六厘舎 東京駅東京ラーメンストリート店</strong>
-                      <p>Tabelog 3.78 · Google 4.1 · <b>★★★★★ 東京站內直接吃很方便，熱門時段容易排隊。</b></p>
+                      <p>
+                        Tabelog 3.78 · Google 4.1 ·
+                        <b>★★★★★ 東京站內直接吃很方便，熱門時段容易排隊。</b>
+                      </p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Rokurinsha+Tokyo+Station+Tokyo+Ramen+Street" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Rokurinsha+Tokyo+Station+Tokyo+Ramen+Street"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                   <li>
                     <div>
-                      <span class="food-type">炸豬排</span><strong>とんかつ 寿々木</strong>
-                      <p>Tabelog 3.53 · Google 4.5 · <b>★★★★☆ 位於東京站 GRANSTA 八重北，動線非常好</b></p>
+                      <span class="food-type">炸豬排</span
+                      ><strong>とんかつ 寿々木</strong>
+                      <p>
+                        Tabelog 3.53 · Google 4.5 ·
+                        <b>★★★★☆ 位於東京站 GRANSTA 八重北，動線非常好</b>
+                      </p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Tonkatsu+Suzuki+Tokyo+Station+Gransta+Yaekita" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Tonkatsu+Suzuki+Tokyo+Station+Gransta+Yaekita"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                   <li>
                     <div>
-                      <span class="food-type">海鮮丼／鯛魚高湯茶泡飯</span><strong>日本橋海鮮丼 つじ半 日本橋本店</strong>
-                      <p>Tabelog 3.59 · Google 4.4 · <b>★★★★★ 東京站八重洲側步行可到。餐點很值得，熱門時段容易排隊。</b></p>
+                      <span class="food-type">海鮮丼／鯛魚高湯茶泡飯</span
+                      ><strong>日本橋海鮮丼 つじ半 日本橋本店</strong>
+                      <p>
+                        Tabelog 3.59 · Google 4.4 ·
+                        <b
+                          >★★★★★
+                          東京站八重洲側步行可到。餐點很值得，熱門時段容易排隊。</b
+                        >
+                      </p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Nihonbashi+Kaisendon+Tsujihan+Nihonbashi+Main+Store" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Nihonbashi+Kaisendon+Tsujihan+Nihonbashi+Main+Store"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                   <li>
                     <div>
-                      <span class="food-type">文字燒／大阪燒</span><strong>月島もんじゃ たまとや 東京駅</strong>
-                      <p>Tabelog 3.33 · Google 4.8 · <b>★★★★☆ 東京站黑塀橫丁內</b></p>
+                      <span class="food-type">文字燒／大阪燒</span
+                      ><strong>月島もんじゃ たまとや 東京駅</strong>
+                      <p>
+                        Tabelog 3.33 · Google 4.8 ·
+                        <b>★★★★☆ 東京站黑塀橫丁內</b>
+                      </p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Tsukishima+Monja+Tamatoya+Tokyo+Station" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Tsukishima+Monja+Tamatoya+Tokyo+Station"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                   <li>
                     <div>
-                      <span class="food-type">拉麵美食街</span><strong>東京ラーメンストリート</strong>
+                      <span class="food-type">拉麵美食街</span
+                      ><strong>東京ラーメンストリート</strong>
                       <p>Google 4.0 · <b>★★★★☆ 適合多人各自選擇</b></p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Tokyo+Ramen+Street" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Tokyo+Ramen+Street"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -265,10 +352,23 @@
                   </li>
                   <li>
                     <div>
-                      <span class="food-type">日式甜點／和風 Café</span><strong>豊洲 ふくらすずめ</strong>
-                      <p>Tabelog 3.40 · <b>★★★★☆ 位於豐洲千客萬來，主打刨冰、白玉、最中等日式甜點</b></p>
+                      <span class="food-type">日式甜點／和風 Café</span
+                      ><strong>豊洲 ふくらすずめ</strong>
+                      <p>
+                        Tabelog 3.40 ·
+                        <b
+                          >★★★★☆
+                          位於豐洲千客萬來，主打刨冰、白玉、最中等日式甜點</b
+                        >
+                      </p>
                     </div>
-                    <a class="restaurant-map" href="https://www.google.com/maps/search/?api=1&query=Toyosu+Fukurasuzume" target="_blank" rel="noreferrer">地圖 ↗</a>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Toyosu+Fukurasuzume"
+                      target="_blank"
+                      rel="noreferrer"
+                      >地圖 ↗</a
+                    >
                   </li>
                 </ul>
               </div>
@@ -746,7 +846,10 @@
                 </div>
               </div>
             </div>
-            <section class="food-section food-reference" aria-label="Day 3 附近美食">
+            <section
+              class="food-section food-reference"
+              aria-label="Day 3 附近美食"
+            >
               <div class="food-heading">
                 <p>NEARBY FOOD</p>
                 <h3>附近美食｜東京車站</h3>
@@ -1619,14 +1722,20 @@
       </section>
     </main>
 
-    <footer class="footer container">
-      <div class="footer-note">
-        <p>日本緊急聯絡：110（警察）／119（消防、救護）</p>
-        <small>277旅行社共同出品</small>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-note">
+          <p>
+            日本緊急聯絡：<a href="tel:110">110（警察）</a>／<a href="tel:119"
+              >119（消防、救護）</a
+            >
+          </p>
+          <small>277旅行社共同出品</small>
+        </div>
+        <a class="back-to-top" href="#top" aria-label="回到頁面頂端"
+          ><span aria-hidden="true">↑</span></a
+        >
       </div>
-      <a class="back-to-top" href="#top" aria-label="回到頁面頂端"
-        ><span aria-hidden="true">↑</span></a
-      >
     </footer>
     <script src="script.js"></script>
     <script src="exchange-rate.js"></script>
