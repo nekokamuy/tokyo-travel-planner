@@ -24,6 +24,7 @@
               <span></span><span></span><span></span>
             </button>
             <div class="site-menu" id="site-menu" hidden>
+              <a href="#currency"><span>00</span>匯率快算</a>
               <a href="#itinerary"><span>01</span>每日行程</a>
               <a href="#tickets"><span>02</span>票券資訊</a>
               <a href="#lodging"><span>03</span>住宿資訊</a>
@@ -52,6 +53,43 @@
         <a href="#tickets"><span>02</span>票券資訊</a>
         <a href="#lodging"><span>03</span>住宿資訊</a>
         <a href="#transit"><span>04</span>地鐵路線圖</a>
+      </section>
+
+      <section class="container currency-section" id="currency" aria-labelledby="currency-title">
+        <div class="currency-card">
+          <div class="currency-intro">
+            <p class="eyebrow">CURRENCY CONVERTER</p>
+            <h2 id="currency-title">匯率快算</h2>
+            <p>輸入日圓或台幣，即時換算旅途中的預估花費。</p>
+          </div>
+          <div class="currency-tool" data-currency-converter>
+            <div class="currency-fields">
+              <label class="currency-field" for="currency-jpy">
+                <span><strong>JPY</strong> 日圓</span>
+                <span class="currency-input-wrap">
+                  <span aria-hidden="true">¥</span>
+                  <input id="currency-jpy" name="jpy" type="text" inputmode="decimal" autocomplete="off" value="10,000" aria-describedby="currency-status" />
+                </span>
+              </label>
+              <span class="currency-equals" aria-hidden="true">≈</span>
+              <label class="currency-field" for="currency-twd">
+                <span><strong>TWD</strong> 台幣</span>
+                <span class="currency-input-wrap">
+                  <span aria-hidden="true">NT$</span>
+                  <input id="currency-twd" name="twd" type="text" inputmode="decimal" autocomplete="off" placeholder="—" aria-describedby="currency-status" />
+                </span>
+              </label>
+            </div>
+            <div class="currency-meta">
+              <div>
+                <strong id="currency-rate">正在取得最新匯率…</strong>
+                <p id="currency-status" role="status" aria-live="polite">連線後會自動保存最後可用匯率。</p>
+              </div>
+              <button class="currency-refresh" type="button" aria-label="重新取得最新匯率">更新匯率</button>
+            </div>
+            <p class="currency-disclaimer">參考匯率，不含現金買賣價及信用卡海外交易手續費。資料來源：<a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">ExchangeRate-API</a></p>
+          </div>
+        </div>
       </section>
 
       <section class="container section" id="itinerary">
@@ -1591,5 +1629,6 @@
       >
     </footer>
     <script src="script.js"></script>
+    <script src="exchange-rate.js"></script>
   </body>
 </html>
