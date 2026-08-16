@@ -7,7 +7,10 @@
     <meta name="description" content="2026 東京 6 天 5 夜共享旅遊行程。" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
     <meta name="apple-mobile-web-app-title" content="東京旅行" />
     <title>東京旅遊計畫｜2026</title>
     <link rel="manifest" href="manifest.webmanifest" />
@@ -36,7 +39,7 @@
               <a href="#tickets"><span>02</span>票券資訊</a>
               <a href="#lodging"><span>03</span>住宿資訊</a>
               <a href="#transit"><span>04</span>地鐵路線圖</a>
-              <a href="#essentials"><span>05</span>旅途備忘</a>
+              <a href="#essentials"><span>05</span>行前確認清單</a>
             </div>
           </div>
         </nav>
@@ -1752,20 +1755,159 @@
         <div class="container">
           <div class="section-heading">
             <p class="eyebrow">ESSENTIALS</p>
-            <h2>旅途備忘</h2>
+            <h2>行前確認清單</h2>
           </div>
           <div class="info-grid info-grid-single">
             <article>
-              <h3>行前確認</h3>
-              <ul class="checklist">
-                <li>護照效期、機票與航班時間</li>
-                <li>住宿資訊與集合方式</li>
-                <li>門票、車票與指定入場時段</li>
-                <li>網路（eSIM）、行動電源、充電線與轉接頭</li>
-                <li>出發前與旅途中確認天氣預報</li>
-                <li>準備日圓現金與可海外使用的信用卡</li>
-                <li>旅平險與不便險資料</li>
-              </ul>
+              <div class="checklist-groups">
+                <section class="checklist-group">
+                  <h4>✈️ 證件與航班</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="passport"
+                    />護照效期</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="flight"
+                    />機票與航班時間</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="visit-japan"
+                    />Visit Japan Web 入境資料</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>🏨 住宿</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="lodging"
+                    />住宿資訊</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="meeting"
+                    />同行者集合方式</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>🎫 門票與交通</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="tickets"
+                    />景點門票與指定入場時段</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="transit-ticket"
+                    />需要預購的交通票券</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="airport-transit"
+                    />機場往返東京的交通方式</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="ic-card"
+                    />ICOCA／交通 IC 卡儲值</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>💴 金錢</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="cash"
+                    />日圓現金</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="credit-card"
+                    />可海外使用的信用卡</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>📱 網路與電子設備</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="esim"
+                    />eSIM</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="power-bank"
+                    />行動電源</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="charger"
+                    />充電器／充電線</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="adapter"
+                    />轉接頭</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>🌦️ 天氣與行李</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="weather"
+                    />出發前確認天氣預報</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="clothing"
+                    />依天氣準備衣物與雨具</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="medicine"
+                    />個人常用藥品</label
+                  >
+                </section>
+                <section class="checklist-group">
+                  <h4>🛡️ 保險</h4>
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="travel-insurance"
+                    />旅平險</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="inconvenience-insurance"
+                    />不便險</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      data-checklist-id="insurance-contact"
+                    />保險資料與緊急聯絡方式</label
+                  >
+                </section>
+              </div>
             </article>
           </div>
         </div>
@@ -1806,7 +1948,12 @@
         >
       </div>
     </footer>
-    <div class="connection-status" role="status" aria-live="polite" hidden></div>
+    <div
+      class="connection-status"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></div>
     <script src="script.js"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js"></script>

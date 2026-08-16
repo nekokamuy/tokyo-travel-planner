@@ -95,3 +95,21 @@ document.querySelector('.collapse-days').addEventListener('click', () => {
     card.open = false;
   });
 });
+
+const checklistStorageKey = 'tokyo-trip-preflight-checklist-v1';
+const checklistInputs = document.querySelectorAll('[data-checklist-id]');
+let savedChecklist = {};
+
+try {
+  savedChecklist = JSON.parse(localStorage.getItem(checklistStorageKey)) || {};
+} catch {
+  savedChecklist = {};
+}
+
+checklistInputs.forEach((input) => {
+  input.checked = savedChecklist[input.dataset.checklistId] === true;
+  input.addEventListener('change', () => {
+    savedChecklist[input.dataset.checklistId] = input.checked;
+    localStorage.setItem(checklistStorageKey, JSON.stringify(savedChecklist));
+  });
+});
