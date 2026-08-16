@@ -6,6 +6,7 @@
     <meta name="theme-color" content="#0d4f55" />
     <meta name="description" content="2026 東京 6 天 5 夜共享旅遊行程。" />
     <title>東京旅遊計畫｜2026</title>
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -116,12 +117,7 @@
               </button>
             </div>
             <p class="currency-disclaimer">
-              參考匯率，不含現金買賣價及信用卡海外交易手續費。資料來源：<a
-                href="https://www.exchangerate-api.com"
-                target="_blank"
-                rel="noreferrer"
-                >ExchangeRate-API</a
-              >
+              參考匯率，不含現金買賣價及信用卡海外交易手續費。
             </p>
           </div>
         </div>
@@ -137,7 +133,13 @@
           <p>點選日期展開細節。行程可依現場狀況彈性調整。</p>
         </div>
         <div class="day-list">
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-09"
+            data-weather-location="東京・豐洲"
+            data-weather-latitude="35.6550"
+            data-weather-longitude="139.7967"
+          >
             <summary>
               <span class="day-number">09/09<br />(三)</span
               ><span
@@ -166,7 +168,7 @@
                 </div>
               </div>
               <div>
-                <time>下午<br />～晚上</time>
+                <time>下午～<br />晚上</time>
                 <div class="schedule-content">
                   <strong>豐洲（Toyosu）</strong>
                   <ul class="schedule-list">
@@ -375,7 +377,13 @@
             </section>
           </details>
 
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-10"
+            data-weather-location="東京・三鷹"
+            data-weather-latitude="35.6835"
+            data-weather-longitude="139.5596"
+          >
             <summary>
               <span class="day-number">09/10<br />(四)</span
               ><span
@@ -722,7 +730,13 @@
             </section>
           </details>
 
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-11"
+            data-weather-location="東京車站周邊"
+            data-weather-latitude="35.6812"
+            data-weather-longitude="139.7671"
+          >
             <summary>
               <span class="day-number">09/11<br />(五)</span
               ><span
@@ -858,7 +872,13 @@
             </section>
           </details>
 
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-12"
+            data-weather-location="鎌倉・江之島"
+            data-weather-latitude="35.3192"
+            data-weather-longitude="139.5467"
+          >
             <summary>
               <span class="day-number">09/12<br />(六)</span
               ><span
@@ -928,7 +948,7 @@
                 </div>
               </div>
               <div>
-                <time>傍晚<br />～晚上</time>
+                <time>傍晚～<br />晚上</time>
                 <div class="schedule-content">
                   <strong>江之島</strong>
                   <ul class="schedule-list">
@@ -1063,7 +1083,13 @@
             </section>
           </details>
 
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-13"
+            data-weather-location="東京・秋葉原"
+            data-weather-latitude="35.6984"
+            data-weather-longitude="139.7731"
+          >
             <summary>
               <span class="day-number">09/13<br />(日)</span
               ><span
@@ -1151,7 +1177,7 @@
                 </div>
               </div>
               <div>
-                <time>下午<br />～晚上</time>
+                <time>下午～<br />晚上</time>
                 <div class="schedule-content">
                   <strong>待決定｜澀谷、新宿、池袋三擇一</strong>
                   <p class="option-note">
@@ -1445,7 +1471,13 @@
             </section>
           </details>
 
-          <details class="day-card">
+          <details
+            class="day-card"
+            data-weather-date="2026-09-14"
+            data-weather-location="成田機場"
+            data-weather-latitude="35.7720"
+            data-weather-longitude="140.3929"
+          >
             <summary>
               <span class="day-number">09/14<br />(一)</span
               ><span
@@ -1478,6 +1510,10 @@
             </div>
           </details>
         </div>
+        <p class="weather-disclaimer">
+          天氣資訊僅為預報，實際天候仍可能變化，請於當日留意最新資訊。<br />
+          可顯示今天起共 16 天的預報（含今天），進入範圍後將自動更新。
+        </p>
       </section>
 
       <section class="ticket-section" id="tickets">
@@ -1610,16 +1646,8 @@
                 <li>
                   <strong>鎌倉／江之島來回</strong>
                   <ul class="ticket-meta">
-                    <li>
-                      狀態：待確認
-                      <span
-                        class="status-mark status-pending"
-                        role="img"
-                        aria-label="待確認"
-                        >!</span
-                      >
-                    </li>
-                    <li>注意：確認一日遊交通與預約需求</li>
+                    <li>狀態：無需事先購票</li>
+                    <li>建議：可使用交通卡 ICOCA／Suica／PASMO</li>
                   </ul>
                 </li>
               </ul>
@@ -1648,7 +1676,7 @@
               >
               <div class="lodging-details">
                 <p>
-                  <span>地址</span>日本東京都中央區日本橋 3-5-13（〒103-0027）
+                  <span>地址</span>日本東京都中央区日本橋 3-5-13（〒103-0027）
                 </p>
                 <p><span>電話</span>+81 3 6880 6602</p>
               </div>
@@ -1659,12 +1687,25 @@
                 >查看地圖 ↗</a
               >
             </div>
-            <div class="lodging-entry lodging-pending">
+            <div class="lodging-entry">
               <div class="lodging-entry-head">
                 <span class="group-tag group-tag-levi">里維班</span
-                ><span class="lodging-status">待定</span>
+                ><span class="lodging-status">暫定</span>
               </div>
-              <p>住宿資訊待確認</p>
+              <strong class="lodging-name">東京龍名館飯店</strong
+              ><span class="lodging-japanese">ホテル龍名館東京</span>
+              <div class="lodging-details">
+                <p>
+                  <span>地址</span>日本東京都中央区八重洲1丁目3-22（〒103-0028）
+                </p>
+                <p><span>電話</span>+81 3 2710 971</p>
+              </div>
+              <a
+                href="https://maps.app.goo.gl/2ukKTfT2DcaiKudW7"
+                target="_blank"
+                rel="noreferrer"
+                >查看地圖 ↗</a
+              >
             </div>
           </article>
         </div>
@@ -1725,12 +1766,31 @@
     <footer class="footer">
       <div class="container footer-inner">
         <div class="footer-note">
-          <p>
-            日本緊急聯絡：<a href="tel:110">110（警察）</a>／<a href="tel:119"
-              >119（消防、救護）</a
-            >
-          </p>
-          <small>277旅行社共同出品</small>
+          <div class="footer-emergency">
+            <span class="footer-label">緊急聯絡</span>
+            <p>
+              日本：<a href="tel:110">110（警察）</a>／<a href="tel:119"
+                >119（消防、救護）</a
+              >
+            </p>
+          </div>
+          <div class="footer-sources">
+            <span class="footer-label">資料來源</span>
+            <p>
+              匯率：<a
+                href="https://www.exchangerate-api.com"
+                target="_blank"
+                rel="noreferrer"
+                >ExchangeRate-API</a
+              ><span aria-hidden="true"> · </span>天氣：<a
+                href="https://open-meteo.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Open-Meteo</a
+              >
+            </p>
+          </div>
+          <small class="footer-brand">277旅行社共同出品</small>
         </div>
         <a class="back-to-top" href="#top" aria-label="回到頁面頂端"
           ><span aria-hidden="true">↑</span></a
@@ -1739,5 +1799,6 @@
     </footer>
     <script src="script.js"></script>
     <script src="exchange-rate.js"></script>
+    <script src="weather.js"></script>
   </body>
 </html>

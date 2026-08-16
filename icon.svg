@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <clipPath id="sunset-clip">
+      <rect width="512" height="416"/>
+    </clipPath>
+  </defs>
+  <rect width="512" height="512" fill="#0d4f55"/>
+  <g transform="translate(63)">
+    <circle cx="120" cy="371" r="90" fill="#c98270" clip-path="url(#sunset-clip)"/>
+    <path
+      fill="#f8f5ee"
+      fill-rule="evenodd"
+      d="M247 137h18v47l32 106h29v28h-20l50 98h-61l-39-91-39 91h-61l50-98h-20v-28h29l32-106v-47Zm9 92-20 61h40l-20-61Z"
+    />
+  </g>
+</svg>
