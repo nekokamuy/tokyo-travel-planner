@@ -55,7 +55,8 @@
           <div><span>天數</span><strong>6 天 5 夜</strong></div>
         </div>
         <button class="app-install" type="button" hidden>
-          <span aria-hidden="true">↓</span> 安裝離線版
+          <span aria-hidden="true">↓</span>
+          <span class="app-install-label">安裝離線版</span>
         </button>
       </div>
     </header>
@@ -1948,6 +1949,18 @@
         >
       </div>
     </footer>
+    <dialog class="install-guide" aria-labelledby="install-guide-title">
+      <button class="install-guide-close" type="button" aria-label="關閉安裝說明">×</button>
+      <p class="eyebrow">OFFLINE APP</p>
+      <h2 id="install-guide-title">手動安裝離線版</h2>
+      <ol>
+        <li>請使用 Safari 開啟這個旅遊手冊。</li>
+        <li>點選 Safari 工具列的「分享」按鈕（方框向上箭頭圖示）。</li>
+        <li>在分享選單中選擇「加入主畫面」。</li>
+        <li>確認 App 名稱後，點選右上角的「加入」。</li>
+      </ol>
+      <p class="install-guide-note">首次離線使用前，請先在有網路時完整開啟網站一次。</p>
+    </dialog>
     <div
       class="connection-status"
       role="status"

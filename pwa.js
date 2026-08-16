@@ -1,4 +1,7 @@
 const installButton = document.querySelector('.app-install');
+const installButtonLabel = document.querySelector('.app-install-label');
+const installGuide = document.querySelector('.install-guide');
+const installGuideClose = document.querySelector('.install-guide-close');
 const connectionStatus = document.querySelector('.connection-status');
 let installPrompt;
 let statusTimer;
@@ -32,7 +35,7 @@ window.addEventListener('beforeinstallprompt', (event) => {
 
 installButton.addEventListener('click', async () => {
   if (!installPrompt) {
-    if (isIos) showStatus('請點 Safari 的分享按鈕，再選「加入主畫面」', 'online', true);
+    if (isIos) installGuide.showModal();
     return;
   }
   installPrompt.prompt();
@@ -50,7 +53,18 @@ window.addEventListener('appinstalled', () => {
 window.addEventListener('online', updateConnectionStatus);
 window.addEventListener('offline', updateConnectionStatus);
 updateConnectionStatus();
-if (isIos && !isStandalone()) installButton.hidden = false;
+if (isIos && !isStandalone()) {
+  installButtonLabel.textContent = '手動安裝離線版方法';
+  installButton.hidden = false;
+}
+
+installGuideClose.addEventListener('click', () => installGuide.close());
+installGuide.addEventListener('click', (event) => {
+  const bounds = installGuide.getBoundingClientRect();
+  const isInside = event.clientX >= bounds.left && event.clientX <= bounds.right
+    && event.clientY >= bounds.top && event.clientY <= bounds.bottom;
+  if (!isInside) installGuide.close();
+});
 
 if ('serviceWorker' in navigator && location.protocol !== 'file:') {
   window.addEventListener('load', async () => {
