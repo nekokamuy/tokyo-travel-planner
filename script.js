@@ -96,6 +96,28 @@ document.querySelector('.collapse-days').addEventListener('click', () => {
   });
 });
 
+const couponFilters = document.querySelectorAll('[data-coupon-filter]');
+const couponCards = document.querySelectorAll('[data-coupon-category]');
+
+couponFilters.forEach((button) => {
+  button.addEventListener('click', () => {
+    const selectedCategory = button.dataset.couponFilter;
+
+    couponFilters.forEach((filter) => {
+      const isActive = filter === button;
+      filter.classList.toggle('is-active', isActive);
+      filter.setAttribute('aria-pressed', String(isActive));
+    });
+
+    couponCards.forEach((card) => {
+      const isVisible = selectedCategory === 'all'
+        || (selectedCategory === 'featured' && card.hasAttribute('data-coupon-featured'))
+        || card.dataset.couponCategory === selectedCategory;
+      card.hidden = !isVisible;
+    });
+  });
+});
+
 const checklistStorageKey = 'tokyo-trip-preflight-checklist-v1';
 const checklistInputs = document.querySelectorAll('[data-checklist-id]');
 let savedChecklist = {};
