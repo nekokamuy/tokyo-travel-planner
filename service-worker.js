@@ -1,5 +1,5 @@
-const CACHE_NAME = 'tokyo-travel-shell-v26';
-const APP_SHELL = ['./', './index.html', './styles.css?v=26', './script.js?v=16', './exchange-rate.js', './weather.js', './pwa.js', './manifest.webmanifest', './icon.svg'];
+const CACHE_NAME = 'tokyo-travel-shell-v27';
+const APP_SHELL = ['./', './index.html', './styles.css?v=27', './script.js?v=16', './exchange-rate.js', './weather.js', './pwa.js', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
