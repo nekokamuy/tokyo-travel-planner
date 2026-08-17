@@ -98,6 +98,19 @@ document.querySelector('.collapse-days').addEventListener('click', () => {
 
 const couponFilters = document.querySelectorAll('[data-coupon-filter]');
 const couponCards = document.querySelectorAll('[data-coupon-category]');
+const couponFilterBar = document.querySelector('.coupon-filters');
+
+function updateCouponFilterFades() {
+  const edgeTolerance = 2;
+  const maxScrollLeft = couponFilterBar.scrollWidth - couponFilterBar.clientWidth;
+
+  couponFilterBar.classList.toggle('has-left-fade', couponFilterBar.scrollLeft > edgeTolerance);
+  couponFilterBar.classList.toggle('has-right-fade', couponFilterBar.scrollLeft < maxScrollLeft - edgeTolerance);
+}
+
+couponFilterBar.addEventListener('scroll', updateCouponFilterFades, { passive: true });
+window.addEventListener('resize', updateCouponFilterFades);
+requestAnimationFrame(updateCouponFilterFades);
 
 couponFilters.forEach((button) => {
   button.addEventListener('click', () => {
