@@ -16,9 +16,18 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=16" />
+    <link rel="stylesheet" href="styles.css?v=26" />
   </head>
   <body>
+    <svg class="icon-sprite" aria-hidden="true">
+      <symbol id="icon-exchange" viewBox="0 0 24 24"><path d="M4 7h13m0 0-3-3m3 3-3 3M20 17H7m0 0 3 3m-3-3 3-3" /></symbol>
+      <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="2" /><path d="M8 3v4m8-4v4M3.5 10h17" /></symbol>
+      <symbol id="icon-ticket" viewBox="0 0 24 24"><path d="M4 6h16v4a2 2 0 0 0 0 4v4H4v-4a2 2 0 0 0 0-4V6Z" /></symbol>
+      <symbol id="icon-bed" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7v9H3v-9Z" /><path d="M9 20v-6h6v6" /></symbol>
+      <symbol id="icon-route" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5" /><circle cx="18" cy="18" r="2.5" /><path d="M8.5 6H14a4 4 0 0 1 0 8h-4a4 4 0 0 0-4 4" /></symbol>
+      <symbol id="icon-tag" viewBox="0 0 24 24"><path d="M5 9h14l1 11H4L5 9Z" /><path d="M9 10V7a3 3 0 0 1 6 0v3" /></symbol>
+      <symbol id="icon-checklist" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" /><path d="m8 12 2.5 2.5L16 9" /></symbol>
+    </svg>
     <header class="hero" id="top">
       <div class="nav-shell">
         <nav class="nav container" aria-label="主要導覽">
@@ -34,13 +43,13 @@
               <span></span><span></span><span></span>
             </button>
             <div class="site-menu" id="site-menu" hidden>
-              <a href="#currency"><span>00</span>匯率速算</a>
-              <a href="#itinerary"><span>01</span>每日行程</a>
-              <a href="#tickets"><span>02</span>票券資訊</a>
-              <a href="#lodging"><span>03</span>住宿資訊</a>
-              <a href="#transit"><span>04</span>地鐵路線圖</a>
-              <a href="#coupons"><span>05</span>購物優惠券</a>
-              <a href="#essentials"><span>06</span>行前確認清單</a>
+              <a href="#currency"><svg aria-hidden="true"><use href="#icon-exchange" /></svg>匯率速算</a>
+              <a href="#itinerary"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>每日行程</a>
+              <a href="#tickets"><svg aria-hidden="true"><use href="#icon-ticket" /></svg>票券資訊</a>
+              <a href="#lodging"><svg aria-hidden="true"><use href="#icon-bed" /></svg>住宿資訊</a>
+              <a href="#transit"><svg aria-hidden="true"><use href="#icon-route" /></svg>地鐵路線圖</a>
+              <a href="#coupons"><svg aria-hidden="true"><use href="#icon-tag" /></svg>購物優惠券</a>
+              <a href="#essentials"><svg aria-hidden="true"><use href="#icon-checklist" /></svg>行前確認清單</a>
             </div>
           </div>
         </nav>
@@ -64,12 +73,12 @@
 
     <main>
       <section class="container quick-links" aria-label="快速連結">
-        <a href="#itinerary"><span>01</span>每日行程</a>
-        <a href="#tickets"><span>02</span>票券資訊</a>
-        <a href="#lodging"><span>03</span>住宿資訊</a>
-        <a href="#transit"><span>04</span>地鐵路線圖</a>
-        <a href="#coupons"><span>05</span>購物優惠券</a>
-        <a href="#essentials"><span>06</span>行前確認清單</a>
+        <a href="#itinerary"><svg aria-hidden="true"><use href="#icon-calendar" /></svg>每日行程</a>
+        <a href="#tickets"><svg aria-hidden="true"><use href="#icon-ticket" /></svg>票券資訊</a>
+        <a href="#lodging"><svg aria-hidden="true"><use href="#icon-bed" /></svg>住宿資訊</a>
+        <a href="#transit"><svg aria-hidden="true"><use href="#icon-route" /></svg>地鐵路線圖</a>
+        <a href="#coupons"><svg aria-hidden="true"><use href="#icon-tag" /></svg>購物優惠券</a>
+        <a href="#essentials"><svg aria-hidden="true"><use href="#icon-checklist" /></svg>行前確認清單</a>
       </section>
 
       <section
@@ -144,7 +153,7 @@
           <p class="eyebrow">ITINERARY</p>
           <div class="itinerary-title-row">
             <h2>每日行程</h2>
-            <button class="collapse-days" type="button">全部收合 ↑</button>
+            <button class="collapse-days" type="button">收合全部行程</button>
           </div>
           <p>點選日期展開細節。行程可依現場狀況彈性調整。</p>
         </div>
@@ -1761,7 +1770,7 @@
             <p class="eyebrow">SHOPPING COUPONS</p>
             <h2>購物優惠券</h2>
             <p>
-              依購物類型快速找到優惠，結帳前請開啟券面確認最新資訊；可左右滑動查看更多分類，更多優惠券內容請參考「優惠券網站」分類。
+              依購物類型快速找到優惠，結帳前請開啟券面確認最新資訊；可左右滑動查看所有分類，更多優惠券內容請參考「優惠券網站」分類。
             </p>
           </div>
           <div class="coupon-filters" aria-label="優惠券分類">
@@ -2193,7 +2202,7 @@
           <small class="footer-brand">277旅行社共同出品</small>
         </div>
         <a class="back-to-top" href="#top" aria-label="回到頁面頂端"
-          ><span aria-hidden="true">↑</span></a
+          ><svg aria-hidden="true" viewBox="0 0 24 16"><path d="M4 12 12 5l8 7" /></svg></a
         >
       </div>
     </footer>
