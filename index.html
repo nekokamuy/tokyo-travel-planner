@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=16" />
   </head>
   <body>
     <header class="hero" id="top">
@@ -1760,33 +1760,242 @@
           <div class="section-heading">
             <p class="eyebrow">SHOPPING COUPONS</p>
             <h2>購物優惠券</h2>
-            <p>依購物類型快速找到優惠，結帳前請開啟券面確認最新資訊；手機可左右滑動查看更多分類。</p>
+            <p>
+              依購物類型快速找到優惠，結帳前請開啟券面確認最新資訊；可左右滑動查看更多分類，更多優惠券內容請參考「優惠券網站」分類。
+            </p>
           </div>
           <div class="coupon-filters" aria-label="優惠券分類">
-            <button type="button" class="is-active" data-coupon-filter="all" aria-pressed="true">全部</button>
-            <button type="button" data-coupon-filter="featured" aria-pressed="false">精選推薦</button>
-            <button type="button" data-coupon-filter="drugstore" aria-pressed="false">💊 藥妝・雜貨</button>
-            <button type="button" data-coupon-filter="electronics" aria-pressed="false">📷 家電・電器</button>
-            <button type="button" data-coupon-filter="shopping" aria-pressed="false">🛍️ 百貨・OUTLET</button>
-            <button type="button" data-coupon-filter="airport" aria-pressed="false">✈️ 機場免稅</button>
-            <button type="button" data-coupon-filter="directory" aria-pressed="false">🗂️ 優惠券網站</button>
+            <button
+              type="button"
+              class="is-active"
+              data-coupon-filter="all"
+              aria-pressed="true"
+            >
+              全部
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="featured"
+              aria-pressed="false"
+            >
+              精選推薦
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="drugstore"
+              aria-pressed="false"
+            >
+              💊 藥妝・雜貨
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="electronics"
+              aria-pressed="false"
+            >
+              📷 家電・電器
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="shopping"
+              aria-pressed="false"
+            >
+              🛍️ 百貨・OUTLET
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="airport"
+              aria-pressed="false"
+            >
+              ✈️ 機場免稅
+            </button>
+            <button
+              type="button"
+              data-coupon-filter="directory"
+              aria-pressed="false"
+            >
+              🗂️ 優惠券網站
+            </button>
           </div>
           <div class="coupon-grid">
-            <a class="coupon-card" data-coupon-category="drugstore" data-coupon-featured href="https://japanportal.donki-global.com/coupon/cp001_zhtw.html" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>唐吉訶德 DONKI</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>無期限</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="drugstore" href="https://www.chictrip.com.tw/service/Coupon/3b333aab-9a2a-4eb3-abf9-6279770f3396" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>大國藥妝 Daikoku Drug</strong><small>免稅 10% ＋ 最高 8% OFF</small><small>無期限</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="drugstore" data-coupon-featured href="https://tw.matsumotokiyoshi.net/coupon_tw" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>松本清 Matsumoto Kiyoshi</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>有效至 2027/3/31</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="drugstore" href="https://www.chictrip.com.tw/service/Coupon/0b64efe1-b6c1-44dc-af13-cc6ac67eb35e" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>SUNDRUG</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>無期限</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="drugstore" href="https://www.chictrip.com.tw/service/Coupon/a745be58-eb58-41fc-b9eb-672f9c88974d" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>札幌藥妝 SATUDORA</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>無期限</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card coupon-card-warning" data-coupon-category="electronics" href="https://www.chictrip.com.tw/service/Coupon/1cd6a346-2800-4f8a-924d-bff9379d0d81" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>BicCamera</strong><small>免稅 10% ＋ 最高 7% OFF</small><small><em>需找新版</em> 有效至 2026/8/31</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="electronics" href="https://www.chictrip.com.tw/service/Coupon/f827d659-704e-41c2-a36c-a2b00ecb2544" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>EDION 愛電王</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>有效至 2026/12/31</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="electronics" data-coupon-featured href="https://app.likejapan.com/zh-tw/coupon/labi-yamada-7percent-coupon" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>YAMADA DENKI / LABI 山田電機</strong><small>滿 ¥5,000 未稅享免稅 10% ＋ 7% OFF</small><small>有效至 2027/4/30</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="shopping" data-coupon-featured href="https://app.likejapan.com/zh-hk/coupon/tokyo-station-ichibangai-coupon" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>東京站一番街</strong><small>滿 ¥5,500 現折 ¥500</small><small>有效至 2027/3/31・限前 1,000 名</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="shopping" href="https://tw.aeonmall.global/coupons/discount?couponid=22&amp;mall=mall52" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>AEON MALL</strong><small>兌換 ¥500 優惠券或指定贈品</small><small>未標示期限</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="shopping" href="https://app.likejapan.com/zh-tw/coupon/ueno-takeya" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>多慶屋 Takeya</strong><small>免稅 10% ＋ 最高 7% OFF</small><small>有效至 2027/4/30</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="airport" data-coupon-featured href="https://duty-free-japan.jp/narita/ta/content/coupon2505-10.html" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>Japan Duty Free｜成田機場</strong><small>成田機場免稅店優惠券</small><small>有效至 2027/3/31</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="directory" href="https://www.letsgojp.com/archives/382974/" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>樂吃購！日本</strong><small>日本優惠券整理網站</small><small>網站持續更新</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="directory" href="https://app.likejapan.com/zh-tw" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>LIKE JAPAN</strong><small>日本優惠券整理網站</small><small>網站持續更新</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
-            <a class="coupon-card" data-coupon-category="directory" href="https://www.chictrip.com.tw/blog/country/japan/japan.coupon#j8mr683226" target="_blank" rel="noreferrer"><span class="coupon-content"><strong>去趣 chicTrip</strong><small>日本優惠券整理網站</small><small>網站持續更新</small></span><span class="coupon-action">立即查看 <b>↗</b></span></a>
+            <a
+              class="coupon-card"
+              data-coupon-category="drugstore"
+              data-coupon-featured
+              href="https://japanportal.donki-global.com/coupon/cp001_zhtw.html"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>唐吉訶德 DONKI</strong
+                ><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>無期限</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="drugstore"
+              href="https://www.chictrip.com.tw/service/Coupon/3b333aab-9a2a-4eb3-abf9-6279770f3396"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>大國藥妝 Daikoku Drug</strong
+                ><small>免稅 10% ＋ 最高 8% OFF</small
+                ><small>無期限</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="drugstore"
+              data-coupon-featured
+              href="https://tw.matsumotokiyoshi.net/coupon_tw"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>松本清 Matsumoto Kiyoshi</strong
+                ><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>有效至 2027/3/31</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="drugstore"
+              href="https://www.chictrip.com.tw/service/Coupon/0b64efe1-b6c1-44dc-af13-cc6ac67eb35e"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>SUNDRUG</strong><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>無期限</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="drugstore"
+              href="https://www.chictrip.com.tw/service/Coupon/a745be58-eb58-41fc-b9eb-672f9c88974d"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>札幌藥妝 SATUDORA</strong
+                ><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>無期限</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card coupon-card-warning"
+              data-coupon-category="electronics"
+              href="https://www.chictrip.com.tw/service/Coupon/1cd6a346-2800-4f8a-924d-bff9379d0d81"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>BicCamera</strong><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small><em>需找新版</em> 有效至 2026/8/31</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="electronics"
+              href="https://www.chictrip.com.tw/service/Coupon/f827d659-704e-41c2-a36c-a2b00ecb2544"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>EDION 愛電王</strong
+                ><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>有效至 2026/12/31</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="electronics"
+              data-coupon-featured
+              href="https://app.likejapan.com/zh-tw/coupon/labi-yamada-7percent-coupon"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>YAMADA DENKI / LABI 山田電機</strong
+                ><small>滿 ¥5,000 未稅享免稅 10% ＋ 7% OFF</small
+                ><small>有效至 2027/4/30</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="shopping"
+              data-coupon-featured
+              href="https://app.likejapan.com/zh-hk/coupon/tokyo-station-ichibangai-coupon"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>東京站一番街</strong><small>滿 ¥5,500 現折 ¥500</small
+                ><small>有效至 2027/3/31・限前 1,000 名</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="shopping"
+              href="https://tw.aeonmall.global/coupons/discount?couponid=22&amp;mall=mall52"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>AEON MALL</strong
+                ><small>兌換 ¥500 優惠券或指定贈品</small
+                ><small>未標示期限</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="shopping"
+              href="https://app.likejapan.com/zh-tw/coupon/ueno-takeya"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>多慶屋 Takeya</strong
+                ><small>免稅 10% ＋ 最高 7% OFF</small
+                ><small>有效至 2027/4/30</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="airport"
+              data-coupon-featured
+              href="https://duty-free-japan.jp/narita/ta/content/coupon2505-10.html"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>Japan Duty Free｜成田機場</strong
+                ><small>成田機場免稅店優惠券</small
+                ><small>有效至 2027/3/31</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="directory"
+              href="https://www.letsgojp.com/archives/382974/"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>樂吃購！日本</strong><small>日本優惠券整理網站</small
+                ><small>網站持續更新</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="directory"
+              href="https://app.likejapan.com/zh-tw"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>LIKE JAPAN</strong><small>日本優惠券整理網站</small
+                ><small>網站持續更新</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
+            <a
+              class="coupon-card"
+              data-coupon-category="directory"
+              href="https://www.chictrip.com.tw/blog/country/japan/japan.coupon#j8mr683226"
+              target="_blank"
+              rel="noreferrer"
+              ><span class="coupon-content"
+                ><strong>去趣 chicTrip</strong><small>日本優惠券整理網站</small
+                ><small>網站持續更新</small></span
+              ><span class="coupon-action">立即查看 <b>↗</b></span></a
+            >
           </div>
         </div>
       </section>
@@ -1989,16 +2198,24 @@
       </div>
     </footer>
     <dialog class="install-guide" aria-labelledby="install-guide-title">
-      <button class="install-guide-close" type="button" aria-label="關閉安裝說明">×</button>
+      <button
+        class="install-guide-close"
+        type="button"
+        aria-label="關閉安裝說明"
+      >
+        ×
+      </button>
       <p class="eyebrow">OFFLINE APP</p>
       <h2 id="install-guide-title">手動安裝離線版</h2>
       <ol>
         <li>請使用 Safari 開啟這個旅遊手冊。</li>
-        <li>點選 Safari 工具列的「分享」按鈕（方框向上箭頭圖示）。</li>
+        <li>點選 Safari 工具列的「分享」按鈕。</li>
         <li>在分享選單中選擇「加入主畫面」。</li>
         <li>確認 App 名稱後，點選右上角的「加入」。</li>
       </ol>
-      <p class="install-guide-note">首次離線使用前，請先在有網路時完整開啟網站一次。</p>
+      <p class="install-guide-note">
+        首次離線使用前，請先在有網路時完整開啟網站一次。
+      </p>
     </dialog>
     <div
       class="connection-status"
@@ -2006,7 +2223,7 @@
       aria-live="polite"
       hidden
     ></div>
-    <script src="script.js"></script>
+    <script src="script.js?v=16"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js"></script>
     <script src="pwa.js"></script>
