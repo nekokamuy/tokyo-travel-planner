@@ -1,5 +1,8 @@
-const CACHE_NAME = 'tokyo-travel-shell-v27';
-const APP_SHELL = ['./', './index.html', './styles.css?v=27', './script.js?v=16', './exchange-rate.js', './weather.js', './pwa.js', './manifest.webmanifest', './icon.svg'];
+const CACHE_VERSION = '1.30.3';
+const VERSION_LABEL = `v${CACHE_VERSION}`;
+const CACHE_NAME = `tokyo-travel-shell-${CACHE_VERSION}`;
+const CACHE_PREFIX = 'tokyo-travel-shell-';
+const APP_SHELL = ['./', './index.html', './styles.css?v=1.30.3', './script.js?v=1.30.0', './exchange-rate.js', './weather.js', './pwa.js?v=1.30.0', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
@@ -7,29 +10,40 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('activate', (event) => {
-  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key.startsWith('tokyo-travel-shell-') && key !== CACHE_NAME).map((key) => caches.delete(key)))));
-  self.clients.claim();
+  event.waitUntil((async () => {
+    const keys = await caches.keys();
+    const oldCacheKeys = keys.filter((key) => key.startsWith(CACHE_PREFIX) && key !== CACHE_NAME);
+
+    await Promise.all(oldCacheKeys.map((key) => caches.delete(key)));
+    await self.clients.claim();
+
+    if (oldCacheKeys.length > 0) {
+      const windows = await self.clients.matchAll({ type: 'window', includeUncontrolled: true });
+      windows.forEach((client) => client.postMessage({ type: 'UPDATE_READY', version: VERSION_LABEL }));
+    }
+  })());
 });
 
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET' || new URL(event.request.url).origin !== self.location.origin) return;
-  if (event.request.mode === 'navigate') {
-    event.respondWith(fetch(event.request).then((response) => {
-      const copy = response.clone();
-      caches.open(CACHE_NAME).then((cache) => cache.put('./index.html', copy));
-      return response;
-    }).catch(() => caches.match('./index.html')));
-    return;
-  }
-
-  event.respondWith(fetch(event.request).then((response) => {
-    if (response.ok) {
-      const copy = response.clone();
-      caches.open(CACHE_NAME).then((cache) => cache.put(event.request, copy));
-    }
-    return response;
-  }).catch(() => caches.match(event.request).then((cached) => {
+  event.respondWith((async () => {
+    const cached = await caches.match(event.request);
     if (cached) return cached;
-    return Response.error();
-  })));
+
+    if (event.request.mode === 'navigate') {
+      const fallback = await caches.match('./index.html');
+      if (fallback) return fallback;
+    }
+
+    try {
+      const response = await fetch(event.request);
+      if (response.ok) {
+        const cache = await caches.open(CACHE_NAME);
+        await cache.put(event.request, response.clone());
+      }
+      return response;
+    } catch {
+      return Response.error();
+    }
+  })());
 });

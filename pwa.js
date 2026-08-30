@@ -3,6 +3,8 @@ const installButtonLabel = document.querySelector('.app-install-label');
 const installGuide = document.querySelector('.install-guide');
 const installGuideClose = document.querySelector('.install-guide-close');
 const connectionStatus = document.querySelector('.connection-status');
+const updateNotice = document.querySelector('.update-notice');
+const updateNowButton = document.querySelector('.update-now');
 let installPrompt;
 let statusTimer;
 const isIos = /iphone|ipad|ipod/i.test(navigator.userAgent);
@@ -53,6 +55,19 @@ window.addEventListener('appinstalled', () => {
 window.addEventListener('online', updateConnectionStatus);
 window.addEventListener('offline', updateConnectionStatus);
 updateConnectionStatus();
+
+updateNowButton.addEventListener('click', () => {
+  updateNowButton.disabled = true;
+  updateNowButton.textContent = '更新中…';
+  window.location.reload();
+});
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.addEventListener('message', (event) => {
+    if (event.data?.type === 'UPDATE_READY') updateNotice.hidden = false;
+  });
+}
+
 if (isIos && !isStandalone()) {
   installButtonLabel.textContent = '手動安裝離線版方法';
   installButton.hidden = false;
