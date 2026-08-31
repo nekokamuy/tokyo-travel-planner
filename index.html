@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=1.31.1" />
+    <link rel="stylesheet" href="styles.css?v=1.32.0" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -113,27 +113,6 @@
     </header>
 
     <main>
-      <section
-        class="container trip-status"
-        data-trip-status
-        aria-labelledby="trip-status-title"
-        hidden
-      >
-        <div class="trip-status-card">
-          <div class="trip-status-copy">
-            <p class="eyebrow" data-trip-status-eyebrow>TRIP COUNTDOWN</p>
-            <h2 id="trip-status-title" data-trip-status-title></h2>
-            <p class="trip-status-lead" data-trip-status-lead></p>
-            <div class="trip-status-weather" data-trip-status-weather hidden aria-live="polite">
-              <span class="trip-status-weather-icon" data-trip-weather-icon aria-hidden="true"></span>
-              <strong data-trip-weather-summary>天氣載入中</strong>
-              <span data-trip-weather-location></span>
-            </div>
-          </div>
-          <div class="trip-status-actions" data-trip-status-actions></div>
-        </div>
-      </section>
-
       <section class="container quick-links" aria-label="快速連結">
         <a href="#itinerary"
           ><svg aria-hidden="true"><use href="#icon-calendar" /></svg
@@ -157,71 +136,58 @@
         >
       </section>
 
-      <section
-        class="container currency-section"
-        id="currency"
-        aria-labelledby="currency-title"
-      >
-        <div class="currency-card">
-          <div class="currency-intro">
-            <p class="eyebrow">CURRENCY CONVERTER</p>
-            <h2 id="currency-title">匯率速算</h2>
-            <p>輸入日圓或台幣，即時換算旅途中的預估花費。</p>
-          </div>
-          <div class="currency-tool" data-currency-converter>
-            <div class="currency-fields">
-              <label class="currency-field" for="currency-jpy">
-                <span><strong>JPY</strong> 日圓</span>
-                <span class="currency-input-wrap">
-                  <span aria-hidden="true">¥</span>
-                  <input
-                    id="currency-jpy"
-                    name="jpy"
-                    type="text"
-                    inputmode="decimal"
-                    autocomplete="off"
-                    value="10,000"
-                    aria-describedby="currency-status"
-                  />
-                </span>
-              </label>
-              <span class="currency-equals" aria-hidden="true">≈</span>
-              <label class="currency-field" for="currency-twd">
-                <span><strong>TWD</strong> 臺幣</span>
-                <span class="currency-input-wrap">
-                  <span aria-hidden="true">NT$</span>
-                  <input
-                    id="currency-twd"
-                    name="twd"
-                    type="text"
-                    inputmode="decimal"
-                    autocomplete="off"
-                    placeholder="—"
-                    aria-describedby="currency-status"
-                  />
-                </span>
-              </label>
-            </div>
-            <div class="currency-meta">
-              <div>
-                <strong id="currency-rate">正在取得最新匯率…</strong>
-                <p id="currency-status" role="status" aria-live="polite">
-                  連線後會自動保存最後可用匯率。
-                </p>
+      <section class="container travel-tools" aria-label="旅遊小工具">
+        <section class="trip-status" data-trip-status aria-labelledby="trip-status-title" hidden>
+          <div class="trip-status-card">
+            <div class="trip-status-copy">
+              <p class="eyebrow" data-trip-status-eyebrow>TRIP COUNTDOWN</p>
+              <h2 id="trip-status-title" data-trip-status-title></h2>
+              <p class="trip-status-lead" data-trip-status-lead></p>
+              <div class="trip-status-weather" data-trip-status-weather hidden aria-live="polite">
+                <span class="trip-status-weather-icon" data-trip-weather-icon aria-hidden="true"></span>
+                <strong data-trip-weather-summary>天氣載入中</strong>
+                <span data-trip-weather-location></span>
               </div>
-              <button
-                class="currency-refresh"
-                type="button"
-                aria-label="重新取得最新匯率"
-              >
-                更新匯率
-              </button>
             </div>
-            <p class="currency-disclaimer">
-              參考匯率，不含現金買賣價及信用卡海外交易手續費。
-            </p>
+            <div class="trip-status-actions" data-trip-status-actions></div>
           </div>
-        </div>
+        </section>
+
+        <section class="currency-section" id="currency" aria-labelledby="currency-title">
+          <div class="currency-card">
+            <div class="currency-intro">
+              <p class="eyebrow">CURRENCY CONVERTER</p>
+              <h2 id="currency-title">匯率速算</h2>
+            </div>
+            <div class="currency-tool" data-currency-converter>
+              <div class="currency-fields">
+                <label class="currency-field" for="currency-jpy">
+                  <span><strong>JPY</strong> 日圓</span>
+                  <span class="currency-input-wrap">
+                    <span aria-hidden="true">¥</span>
+                    <input id="currency-jpy" name="jpy" type="text" inputmode="decimal" autocomplete="off" value="10,000" aria-describedby="currency-status" />
+                  </span>
+                </label>
+                <span class="currency-equals" aria-hidden="true">≈</span>
+                <label class="currency-field" for="currency-twd">
+                  <span><strong>TWD</strong> 臺幣</span>
+                  <span class="currency-input-wrap">
+                    <span aria-hidden="true">NT$</span>
+                    <input id="currency-twd" name="twd" type="text" inputmode="decimal" autocomplete="off" placeholder="—" aria-describedby="currency-status" />
+                  </span>
+                </label>
+              </div>
+              <div class="currency-meta">
+                <div>
+                  <strong id="currency-rate">正在取得最新匯率…</strong>
+                  <p id="currency-status" role="status" aria-live="polite">連線後會自動保存最後可用匯率。</p>
+                </div>
+                <button class="currency-refresh" type="button" aria-label="重新取得最新匯率">更新匯率</button>
+              </div>
+              <p class="currency-disclaimer">參考匯率，不含現金買賣價及信用卡海外交易手續費。</p>
+            </div>
+          </div>
+        </section>
       </section>
 
       <section class="container section" id="itinerary">
@@ -2318,7 +2284,7 @@
       <span>已取得新版內容</span>
       <button class="update-now" type="button">立即更新</button>
     </div>
-    <script src="script.js?v=1.31.2"></script>
+    <script src="script.js?v=1.32.0"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js?v=1.31.0"></script>
     <script src="pwa.js?v=1.30.0"></script>

@@ -48,7 +48,7 @@ function initializeTripStatus() {
     tripStatusWeather.hidden = true;
     tripStatusActions.innerHTML = [
       tripAction('行程規劃好了嗎？', '查看每日行程', '#itinerary', true),
-      tripAction('東西收拾好了嗎？', '查看行前確認清單', '#essentials')
+      tripAction('東西收拾好了嗎？', '查看行前清單', '#essentials')
     ].join('');
   } else if (today <= lastDate) {
     const card = tripDayCards.find((item) => item.dataset.weatherDate === today);
