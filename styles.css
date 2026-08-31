@@ -116,7 +116,7 @@ a { color:inherit; text-underline-offset:3px; }
 }
 
 /* Compact inline action pills */
-.place-map,.restaurant-map,.ticket-link,.ticket-return,.lodging-entry > a {
+.place-map,.restaurant-map,.ticket-link,.ticket-return,.lodging-entry > a,.food-reference .food-reference-link {
   display:inline-flex;
   width:max-content;
   align-items:center;
@@ -135,20 +135,23 @@ a { color:inherit; text-underline-offset:3px; }
 .restaurant-map:hover,.restaurant-map:focus-visible,
 .ticket-link:hover,.ticket-link:focus-visible,
 .ticket-return:hover,.ticket-return:focus-visible,
-.lodging-entry > a:hover,.lodging-entry > a:focus-visible {
+.lodging-entry > a:hover,.lodging-entry > a:focus-visible,
+.food-reference .food-reference-link:hover,.food-reference .food-reference-link:focus-visible {
   border-color:#aeb9b5;
   color:#405b5e;
   background:#f8f5ee80;
 }
-.ticket-link,.ticket-return {
+.ticket-link,.ticket-return,.food-reference .food-reference-link {
   border-color:#dfc4ba;
   color:#b97862;
 }
 .ticket-link:hover,.ticket-link:focus-visible,
-.ticket-return:hover,.ticket-return:focus-visible {
+.ticket-return:hover,.ticket-return:focus-visible,
+.food-reference .food-reference-link:hover,.food-reference .food-reference-link:focus-visible {
   border-color:#c99582;
   color:#a85f49;
   background:#fff7f380;
 }
 .ticket-return { padding-inline:8px; }
+.food-reference .food-reference-link { font-size:.76rem; }
 .lodging-entry > a { font-size:.76rem; }
