@@ -55,6 +55,9 @@
     meta.textContent = card.dataset.weatherLocation;
     meta.dataset.state = state;
     view.setAttribute('aria-label', `${card.dataset.weatherLocation}：${message}`);
+    window.dispatchEvent(new CustomEvent('tripweatherupdate', { detail: {
+      date:card.dataset.weatherDate, icon:'', summary:message, location:card.dataset.weatherLocation, state
+    } }));
   }
 
   function formatUpdated(iso) {
@@ -72,6 +75,13 @@
     meta.textContent = `${card.dataset.weatherLocation}・${prefix} ${formatUpdated(data.fetchedAt)} 更新`;
     meta.dataset.state = state;
     view.setAttribute('aria-label', `${card.dataset.weatherLocation}，${label}，最低 ${Math.round(data.temperatureMin)} 度，最高 ${Math.round(data.temperatureMax)} 度，降雨機率 ${Math.round(data.precipitationProbability)}%`);
+    window.dispatchEvent(new CustomEvent('tripweatherupdate', { detail: {
+      date:card.dataset.weatherDate,
+      icon,
+      summary:`${label}・${Math.round(data.temperatureMin)}–${Math.round(data.temperatureMax)}°C・降雨 ${Math.round(data.precipitationProbability)}%`,
+      location:card.dataset.weatherLocation,
+      state
+    } }));
   }
 
   async function fetchForecast(card) {
