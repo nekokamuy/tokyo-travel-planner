@@ -1,8 +1,8 @@
-const CACHE_VERSION = '1.32.0';
+const CACHE_VERSION = '1.32.6';
 const VERSION_LABEL = `v${CACHE_VERSION}`;
 const CACHE_NAME = `tokyo-travel-shell-${CACHE_VERSION}`;
 const CACHE_PREFIX = 'tokyo-travel-shell-';
-const APP_SHELL = ['./', './index.html', './styles.css?v=1.32.0', './script.js?v=1.32.0', './exchange-rate.js', './weather.js?v=1.31.0', './pwa.js?v=1.30.0', './manifest.webmanifest', './icon.svg'];
+const APP_SHELL = ['./', './index.html', './styles.css?v=1.32.4', './script.js?v=1.32.0', './exchange-rate.js', './weather.js?v=1.31.0', './pwa.js?v=1.30.0', './manifest.webmanifest', './icon.svg'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL)));
