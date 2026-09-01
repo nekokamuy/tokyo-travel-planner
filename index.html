@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=1.32.7" />
+    <link rel="stylesheet" href="styles.css?v=1.33.0" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -137,14 +137,28 @@
       </section>
 
       <section class="container travel-tools" aria-label="旅遊小工具">
-        <section class="trip-status" data-trip-status aria-labelledby="trip-status-title" hidden>
+        <section
+          class="trip-status"
+          data-trip-status
+          aria-labelledby="trip-status-title"
+          hidden
+        >
           <div class="trip-status-card">
             <div class="trip-status-copy">
               <p class="eyebrow" data-trip-status-eyebrow>TRIP COUNTDOWN</p>
               <h2 id="trip-status-title" data-trip-status-title></h2>
               <p class="trip-status-lead" data-trip-status-lead></p>
-              <div class="trip-status-weather" data-trip-status-weather hidden aria-live="polite">
-                <span class="trip-status-weather-icon" data-trip-weather-icon aria-hidden="true"></span>
+              <div
+                class="trip-status-weather"
+                data-trip-status-weather
+                hidden
+                aria-live="polite"
+              >
+                <span
+                  class="trip-status-weather-icon"
+                  data-trip-weather-icon
+                  aria-hidden="true"
+                ></span>
                 <strong data-trip-weather-summary>天氣載入中</strong>
                 <span data-trip-weather-location></span>
               </div>
@@ -153,7 +167,11 @@
           </div>
         </section>
 
-        <section class="currency-section" id="currency" aria-labelledby="currency-title">
+        <section
+          class="currency-section"
+          id="currency"
+          aria-labelledby="currency-title"
+        >
           <div class="currency-card">
             <div class="currency-intro">
               <p class="eyebrow">CURRENCY CONVERTER</p>
@@ -165,7 +183,15 @@
                   <span><strong>JPY</strong> 日圓</span>
                   <span class="currency-input-wrap">
                     <span aria-hidden="true">¥</span>
-                    <input id="currency-jpy" name="jpy" type="text" inputmode="decimal" autocomplete="off" value="10,000" aria-describedby="currency-status" />
+                    <input
+                      id="currency-jpy"
+                      name="jpy"
+                      type="text"
+                      inputmode="decimal"
+                      autocomplete="off"
+                      value="10,000"
+                      aria-describedby="currency-status"
+                    />
                   </span>
                 </label>
                 <span class="currency-equals" aria-hidden="true">≈</span>
@@ -173,18 +199,36 @@
                   <span><strong>TWD</strong> 臺幣</span>
                   <span class="currency-input-wrap">
                     <span aria-hidden="true">NT$</span>
-                    <input id="currency-twd" name="twd" type="text" inputmode="decimal" autocomplete="off" placeholder="—" aria-describedby="currency-status" />
+                    <input
+                      id="currency-twd"
+                      name="twd"
+                      type="text"
+                      inputmode="decimal"
+                      autocomplete="off"
+                      placeholder="—"
+                      aria-describedby="currency-status"
+                    />
                   </span>
                 </label>
               </div>
               <div class="currency-meta">
                 <div>
                   <strong id="currency-rate">正在取得最新匯率…</strong>
-                  <p id="currency-status" role="status" aria-live="polite">連線後會自動保存最後可用匯率。</p>
+                  <p id="currency-status" role="status" aria-live="polite">
+                    連線後會自動保存最後可用匯率。
+                  </p>
                 </div>
-                <button class="currency-refresh" type="button" aria-label="重新取得最新匯率">更新匯率</button>
+                <button
+                  class="currency-refresh"
+                  type="button"
+                  aria-label="重新取得最新匯率"
+                >
+                  更新匯率
+                </button>
               </div>
-              <p class="currency-disclaimer">參考匯率，不含現金買賣價及信用卡海外交易手續費。</p>
+              <p class="currency-disclaimer">
+                參考匯率，不含現金買賣價及信用卡海外交易手續費。
+              </p>
             </div>
           </div>
         </section>
@@ -239,8 +283,11 @@
                 <div class="schedule-content">
                   <strong>豐洲（Toyosu）</strong>
                   <ul class="schedule-list">
-                    <li>
+                    <li id="day1-teamlab">
                       teamLab Planets
+                      <a class="ticket-link" href="#ticket-teamlab"
+                        >查看票券資訊</a
+                      >
                       <a
                         class="place-map"
                         href="https://www.google.com/maps/search/?api=1&query=teamLab+Planets+Tokyo"
@@ -582,9 +629,6 @@
                   <ul class="schedule-list">
                     <li id="day2-tower">
                       東京鐵塔
-                      <a class="ticket-link" href="#ticket-tokyo-tower"
-                        >查看展望台及票券資訊</a
-                      >
                       <a
                         class="place-map"
                         href="https://www.google.com/maps/search/?api=1&query=Tokyo+Tower"
@@ -594,9 +638,29 @@
                       >
                     </li>
                   </ul>
+                  <details class="tower-photo-details tower-visit-details">
+                    <summary>
+                      展望台參觀及商店資訊 <span aria-hidden="true">▾</span>
+                    </summary>
+                    <ul class="ticket-meta">
+                      <li>現場購票即可</li>
+                      <li>建議 21:00 前抵達，看夜景及逛商店較充裕。</li>
+                      <li class="ticket-subheading">🗼 展望台資訊</li>
+                      <li>Main Deck｜150m · 09:00～23:00，最後入場 22:30</li>
+                      <li>Top Deck｜250m · 09:00～22:45，最後入場約 22:15</li>
+                      <li>Top Deck Tour 包含 Main Deck</li>
+                      <li class="ticket-subheading">🛍️ 商店資訊</li>
+                      <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
+                      <li>GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富</li>
+                      <li>
+                        Foot Town 其他商店多數約 09:30～21:30，部分至
+                        22:00～22:30
+                      </li>
+                    </ul>
+                  </details>
                   <details class="tower-photo-details">
                     <summary>
-                      推薦拍攝點 <span aria-hidden="true">▾</span>
+                      周圍推薦拍攝點 <span aria-hidden="true">▾</span>
                     </summary>
                     <ul class="schedule-list">
                       <li>
@@ -935,7 +999,9 @@
                 <p>NEARBY FOOD</p>
                 <h3>附近美食｜東京車站</h3>
               </div>
-              <a class="food-reference-link" href="#day1-tokyo-station-food">查看 D1 東京車站美食</a>
+              <a class="food-reference-link" href="#day1-tokyo-station-food"
+                >查看 D1 東京車站美食</a
+              >
             </section>
           </details>
 
@@ -1594,11 +1660,31 @@
             <div class="ticket-group">
               <h4 class="ticket-category">◫ 門票類</h4>
               <ul class="ticket-list">
+                <li id="ticket-teamlab">
+                  <div class="ticket-heading">
+                    <strong>teamLab Planets</strong
+                    ><a class="ticket-return" href="#day1-teamlab"
+                      >跳至 D1 行程</a
+                    >
+                  </div>
+                  <ul class="ticket-meta">
+                    <li>
+                      狀態：待確認
+                      <span
+                        class="status-mark status-pending"
+                        role="img"
+                        aria-label="待確認"
+                        >!</span
+                      >
+                    </li>
+                    <li>日期：9/09（三）</li>
+                  </ul>
+                </li>
                 <li id="ticket-ghibli">
                   <div class="ticket-heading">
                     <strong>三鷹之森吉卜力美術館</strong
                     ><a class="ticket-return" href="#day2-ghibli"
-                      >返回 D2 行程</a
+                      >跳至 D2 行程</a
                     >
                   </div>
                   <ul class="ticket-meta">
@@ -1614,41 +1700,11 @@
                     <li>日期：9/10(四) 10:00場 4張</li>
                   </ul>
                 </li>
-                <li id="ticket-tokyo-tower">
-                  <div class="ticket-heading">
-                    <strong>東京鐵塔展望台</strong
-                    ><a class="ticket-return" href="#day2-tower"
-                      >返回 D2 行程</a
-                    >
-                  </div>
-                  <ul class="ticket-meta ticket-quick-notes">
-                    <li>狀態：現場購票即可</li>
-                    <li>建議：21:00 前抵達，看夜景＋逛商店較充裕。</li>
-                  </ul>
-                  <details class="ticket-details">
-                    <summary>
-                      東京鐵塔參觀資訊 <span aria-hidden="true">▾</span>
-                    </summary>
-                    <ul class="ticket-meta">
-                      <li class="ticket-subheading">🗼 展望台資訊</li>
-                      <li>Main Deck｜150m · 09:00～23:00，最後入場 22:30</li>
-                      <li>Top Deck｜250m · 09:00～22:45，最後入場約 22:15</li>
-                      <li>Top Deck Tour 包含 Main Deck</li>
-                      <li class="ticket-subheading">🛍️ 商店資訊</li>
-                      <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
-                      <li>GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富</li>
-                      <li>
-                        Foot Town 其他商店多數約 09:30～21:30，部分至
-                        22:00～22:30
-                      </li>
-                    </ul>
-                  </details>
-                </li>
                 <li id="ticket-disney">
                   <div class="ticket-heading">
                     <strong>迪士尼</strong
                     ><a class="ticket-return" href="#day3-disney"
-                      >返回 D3 行程</a
+                      >跳至 D3 行程</a
                     >
                   </div>
                   <ul class="ticket-meta">
@@ -1668,7 +1724,7 @@
                   <div class="ticket-heading">
                     <strong>哈利波特影城</strong
                     ><a class="ticket-return" href="#day3-harry-potter"
-                      >返回 D3 行程</a
+                      >跳至 D3 行程</a
                     >
                   </div>
                   <ul class="ticket-meta">
@@ -2241,7 +2297,7 @@
             </div>
             <div class="footer-version-block">
               <span class="footer-label">版本資訊</span>
-              <p>v1.32.7 · 更新於 2026/08/31</p>
+              <p>v1.33.1 · 更新於 2026/09/01</p>
             </div>
           </div>
           <small class="footer-brand">277旅行社共同出品</small>
@@ -2252,6 +2308,18 @@
         ></a>
       </div>
     </footer>
+    <dialog class="ticket-dialog" aria-labelledby="ticket-dialog-title">
+      <button
+        class="ticket-dialog-close"
+        type="button"
+        aria-label="關閉票券資訊"
+      >
+        ×
+      </button>
+      <p class="eyebrow">TICKET DETAILS</p>
+      <h2 id="ticket-dialog-title">票券資訊</h2>
+      <div class="ticket-dialog-content" data-ticket-dialog-content></div>
+    </dialog>
     <dialog class="install-guide" aria-labelledby="install-guide-title">
       <button
         class="install-guide-close"
@@ -2282,7 +2350,7 @@
       <span>已取得新版內容</span>
       <button class="update-now" type="button">立即更新</button>
     </div>
-    <script src="script.js?v=1.32.0"></script>
+    <script src="script.js?v=1.33.1"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js?v=1.31.0"></script>
     <script src="pwa.js?v=1.30.0"></script>

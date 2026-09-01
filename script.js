@@ -142,16 +142,37 @@ window.addEventListener('scroll', () => {
 updateBackToTopVisibility();
 updateNavigationState();
 
+const ticketDialog = document.querySelector('.ticket-dialog');
+const ticketDialogContent = ticketDialog?.querySelector('[data-ticket-dialog-content]');
+const ticketDialogClose = ticketDialog?.querySelector('.ticket-dialog-close');
+let ticketDialogTrigger = null;
+
 document.querySelectorAll('.ticket-link').forEach((link) => {
   link.addEventListener('click', (event) => {
-    event.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
 
     if (!target) return;
+    if (!ticketDialog?.showModal || !ticketDialogContent) return;
 
-    history.replaceState(null, '', link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    event.preventDefault();
+    const content = target.cloneNode(true);
+    content.removeAttribute('id');
+    content.querySelector('.ticket-return')?.remove();
+    content.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));
+    content.classList.add('ticket-dialog-entry');
+    ticketDialogContent.replaceChildren(content);
+    ticketDialogTrigger = link;
+    ticketDialog.showModal();
   });
+});
+
+ticketDialogClose?.addEventListener('click', () => ticketDialog.close());
+ticketDialog?.addEventListener('click', (event) => {
+  if (event.target === ticketDialog) ticketDialog.close();
+});
+ticketDialog?.addEventListener('close', () => {
+  ticketDialogTrigger?.focus();
+  ticketDialogTrigger = null;
 });
 
 document.querySelectorAll('.ticket-return').forEach((link) => {
