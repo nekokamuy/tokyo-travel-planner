@@ -171,3 +171,7 @@ a { color:inherit; text-underline-offset:3px; }
 .ticket-dialog-entry .ticket-heading strong { font-size:1rem; }
 .ticket-dialog-entry .ticket-meta { margin-top:10px; padding-left:1.15rem; font-size:.82rem; }
 @media (max-width:620px) { .ticket-dialog { width:calc(100% - 24px); padding:22px 19px; } }
+
+/* Neutral dialog backdrop and equal-priority countdown actions */
+.install-guide::backdrop,.ticket-dialog::backdrop { background:rgba(38,38,38,.4); backdrop-filter:blur(2px); }
+.trip-status-action-primary { border-color:var(--line); background:#fff; }
