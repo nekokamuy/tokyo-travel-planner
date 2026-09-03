@@ -206,9 +206,11 @@ document.querySelectorAll('.food-reference a').forEach((link) => {
   });
 });
 
-document.querySelector('.collapse-days').addEventListener('click', () => {
-  document.querySelectorAll('.day-card[open]').forEach((card) => {
-    card.open = false;
+document.querySelectorAll('.collapse-days').forEach((button) => {
+  button.addEventListener('click', () => {
+    document.querySelectorAll('.day-card[open]').forEach((card) => {
+      card.open = false;
+    });
   });
 });
 

@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=1.33.2" />
+    <link rel="stylesheet" href="styles.css?v=1.37.2" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -645,16 +645,30 @@
                     <ul class="ticket-meta">
                       <li>現場購票即可</li>
                       <li>建議 21:00 前抵達，看夜景及逛商店較充裕。</li>
-                      <li class="ticket-subheading">🗼 展望台資訊</li>
-                      <li>Main Deck｜150m · 09:00～23:00，最後入場 22:30</li>
-                      <li>Top Deck｜250m · 09:00～22:45，最後入場約 22:15</li>
-                      <li>Top Deck Tour 包含 Main Deck</li>
-                      <li class="ticket-subheading">🛍️ 商店資訊</li>
-                      <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
-                      <li>GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富</li>
-                      <li>
-                        Foot Town 其他商店多數約 09:30～21:30，部分至
-                        22:00～22:30
+                      <li class="ticket-subheading">
+                        🗼 展望台資訊
+                        <ul class="tower-sublist">
+                          <li>
+                            Main Deck｜150m · 09:00～23:00，最後入場 22:30
+                          </li>
+                          <li>
+                            Top Deck｜250m · 09:00～22:45，最後入場約 22:15
+                          </li>
+                          <li>Top Deck Tour 包含 Main Deck</li>
+                        </ul>
+                      </li>
+                      <li class="ticket-subheading">
+                        🛍️ 商店資訊
+                        <ul class="tower-sublist">
+                          <li>THE SKY（Main Deck 2F）｜09:00～22:30</li>
+                          <li>
+                            GALAXY（Foot Town 3F）｜09:00～22:45，商品較豐富
+                          </li>
+                          <li>
+                            Foot Town 其他商店多數約 09:30～21:30，部分至
+                            22:00～22:30
+                          </li>
+                        </ul>
                       </li>
                     </ul>
                   </details>
@@ -1316,8 +1330,8 @@
                   <p class="option-note">
                     依當天體力、興趣與時間選擇一個區域。
                   </p>
-                  <div class="option-group">
-                    <span>澀谷</span>
+                  <details class="option-group option-card">
+                    <summary>澀谷</summary>
                     <ul class="schedule-list">
                       <li>
                         SHIBUYA SKY
@@ -1380,9 +1394,9 @@
                         >
                       </li>
                     </ul>
-                  </div>
-                  <div class="option-group">
-                    <span>新宿</span>
+                  </details>
+                  <details class="option-group option-card">
+                    <summary>新宿</summary>
                     <ul class="schedule-list">
                       <li>
                         新宿御苑
@@ -1435,9 +1449,9 @@
                         >
                       </li>
                     </ul>
-                  </div>
-                  <div class="option-group">
-                    <span>池袋</span>
+                  </details>
+                  <details class="option-group option-card">
+                    <summary>池袋</summary>
                     <ul class="schedule-list">
                       <li>
                         Sunshine City
@@ -1490,14 +1504,14 @@
                         >
                       </li>
                     </ul>
-                  </div>
+                  </details>
                 </div>
               </div>
             </div>
             <section class="food-section" aria-label="Day 5 附近美食">
               <div class="food-heading">
                 <p>NEARBY FOOD</p>
-                <h3>附近美食｜秋葉原・澀谷</h3>
+                <h3>附近美食｜秋葉原・澀谷／新宿／池袋</h3>
               </div>
               <div class="food-area">
                 <h4>秋葉原</h4>
@@ -1568,9 +1582,94 @@
                   </li>
                 </ul>
               </div>
-              <div class="food-area">
-                <h4>澀谷（若前往）</h4>
+              <details class="food-area food-option-card">
+                <summary>澀谷</summary>
                 <ul class="restaurant-list">
+                  <li>
+                    <div>
+                      <span class="food-type">炸豬排丼</span
+                      ><strong>瑞兆</strong>
+                      <p>
+                        Tabelog 3.5+ · Google 4.3 ·
+                        <b>★★★★★ 強推，特色豬排丼值得排隊。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Zuicho+Shibuya"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">老派喫茶店／手沖咖啡／蛋糕</span
+                      ><strong>茶亭 羽當</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.1 ·
+                        <b>★★★★★ 咖啡與喫茶店氛圍都很出色，逛街休息首選。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Satei+Hato+Shibuya"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">水果聖代／甜點／咖啡</span
+                      ><strong>渋谷西村 フルーツパーラー 道玄坂店</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.0+ ·
+                        <b>★★★★★ 季節水果聖代推薦，位置方便很適合下午茶。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Shibuya+Nishimura+Fruit+Parlor+Dogenzaka"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">法式麵包／可頌／甜點</span
+                      ><strong>VIRON 渋谷店</strong>
+                      <p>
+                        Tabelog 3.8+ · Google 4.0+ ·
+                        <b>★★★★★ 麵包類強推，順路外帶也很值得。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=VIRON+Shibuya"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">美式漢堡</span
+                      ><strong>Reg-On Diner 渋谷本店</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.4 ·
+                        <b>★★★★☆ 漢堡本身很強，想換換日式料理口味時推薦。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Reg-On+Diner+Shibuya"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
                   <li>
                     <div>
                       <span class="food-type">平價迴轉壽司</span
@@ -1600,7 +1699,241 @@
                     >
                   </li>
                 </ul>
-              </div>
+              </details>
+              <details class="food-area food-option-card">
+                <summary>新宿</summary>
+                <ul class="restaurant-list">
+                  <li>
+                    <div>
+                      <span class="food-type">蝦味沾麵</span
+                      ><strong>五ノ神製作所</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.1 ·
+                        <b>★★★★★ 濃厚蝦味很有特色，喜歡蝦的人強推。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Gonokami+Seisakusho+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">日式咖哩</span
+                      ><strong>モンスナック</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.0+ ·
+                        <b>★★★★★ 老派新宿咖哩代表，平價又有特色。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Mon+Snack+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">咖啡／麵包／德式香腸／輕食</span
+                      ><strong>BERG</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.2 ·
+                        <b>★★★★★ 便宜又有在地感，早餐或逛街途中休息都推薦。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=BERG+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">天婦羅</span
+                      ><strong>天ぷら 船橋屋 本店</strong>
+                      <p>
+                        Tabelog 3.5+ · Google 4.0 ·
+                        <b
+                          >★★★★☆
+                          傳統天婦羅老店，想安排正式一點的日式料理可選。</b
+                        >
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Tempura+Funabashiya+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">昭和喫茶／聖代／蛋包飯</span
+                      ><strong>珈琲西武 本店</strong>
+                      <p>
+                        Tabelog 3.5+ · Google 4.0+ ·
+                        <b>★★★★☆ 華麗昭和復古氛圍很有特色，適合下午茶。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Coffee+Seibu+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">雞白湯魚介沾麵</span
+                      ><strong>風雲児 新宿本店</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.3 ·
+                        <b>★★★★☆ 經典人氣沾麵名店，好吃但排隊過長可跳過。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Fuunji+Shinjuku"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                </ul>
+              </details>
+              <details class="food-area food-option-card">
+                <summary>池袋</summary>
+                <ul class="restaurant-list">
+                  <li>
+                    <div>
+                      <span class="food-type">拿坡里窯烤披薩／義大利料理</span
+                      ><strong>PIZZA BORSA</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.5 ·
+                        <b>★★★★★ 披薩強推，想換掉日式料理時非常值得安排。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=PIZZA+BORSA+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">老派喫茶店／手沖咖啡</span
+                      ><strong>皇琲亭</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.0+ ·
+                        <b>★★★★★ 咖啡控推薦，池袋很值得去的傳統喫茶店。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Kohitei+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">町中華／巨大煎餃／炒飯</span
+                      ><strong>開楽 本店</strong>
+                      <p>
+                        Tabelog 3.5+ · Google 4.1+ ·
+                        <b>★★★★★ 巨大煎餃最推薦，平價又有日本町中華特色。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Kairaku+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">鹽味／醬油拉麵</span
+                      ><strong>麺屋 Hulu-lu</strong>
+                      <p>
+                        Tabelog 3.7+ · Google 4.4 ·
+                        <b>★★★★★ 清爽系拉麵強推，想吃拉麵可優先選這間。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Menya+Hulu-lu+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">武藏野烏龍麵／極粗手打麵</span
+                      ><strong>うちたて家</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.0 ·
+                        <b>★★★★☆ 粗硬有嚼勁的麵體很有特色，喜歡硬麵再選。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Uchitateya+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">麻辣味噌拉麵</span
+                      ><strong>鬼金棒 池袋店</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.1 ·
+                        <b>★★★★☆ 麻辣味特色很強，愛花椒與辣味的人推薦。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Kikanbo+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                  <li>
+                    <div>
+                      <span class="food-type">豚骨醬油拉麵</span
+                      ><strong>無敵家</strong>
+                      <p>
+                        Tabelog 3.6+ · Google 4.2 ·
+                        <b>★★★★☆ 池袋經典拉麵，但排隊太長就不用特地等。</b>
+                      </p>
+                    </div>
+                    <a
+                      class="restaurant-map"
+                      href="https://www.google.com/maps/search/?api=1&query=Mutekiya+Ikebukuro"
+                      target="_blank"
+                      rel="noreferrer"
+                      >開啟地圖</a
+                    >
+                  </li>
+                </ul>
+              </details>
             </section>
           </details>
 
@@ -1643,6 +1976,9 @@
             </div>
           </details>
         </div>
+        <div class="itinerary-footer-actions">
+          <button class="collapse-days" type="button">收合全部行程</button>
+        </div>
         <p class="weather-disclaimer">
           天氣資訊僅為預報，實際天候仍可能變化，請於當日留意最新資訊。<br />
           可顯示今天起共 16 天的預報（含今天），進入範圍後將自動更新。
@@ -1677,7 +2013,17 @@
                         >!</span
                       >
                     </li>
-                    <li>日期：9/09（三）</li>
+                    <li>日期：9/9 (三)</li>
+                    <li>
+                      注意：需事先線上購票，無現場售票；
+                      <a
+                        class="ticket-purchase-text"
+                        href="https://teamlabplanets.dmm.com/zh_tw/ticket/admission_date/cdfbea293ea878f7ab1530b16018e5ca"
+                        target="_blank"
+                        rel="noreferrer"
+                        >前往官方購票</a
+                      >
+                    </li>
                   </ul>
                 </li>
                 <li id="ticket-ghibli">
@@ -1697,7 +2043,7 @@
                         >✓</span
                       >
                     </li>
-                    <li>日期：9/10(四) 10:00場 4張</li>
+                    <li>日期：9/10 (四) 10:00場 4張</li>
                   </ul>
                 </li>
                 <li id="ticket-disney">
@@ -1737,7 +2083,7 @@
                         >✓</span
                       >
                     </li>
-                    <li>日期：9/11(五) 9:00 入場</li>
+                    <li>日期：9/11 (五) 9:00 入場</li>
                   </ul>
                 </li>
               </ul>
@@ -1837,7 +2183,7 @@
           <div class="section-heading">
             <p class="eyebrow">TRANSIT</p>
             <h2>東京地鐵／<span class="heading-sans">JR</span> 路線圖</h2>
-            <p>出發前可先下載，旅途中也能快速開啟查詢。</p>
+            <p>點擊即可查看地圖。</p>
           </div>
           <div class="transit-grid">
             <a
@@ -2297,7 +2643,7 @@
             </div>
             <div class="footer-version-block">
               <span class="footer-label">版本資訊</span>
-              <p>v1.33.2 · 更新於 2026/09/01</p>
+              <p>v1.37.2 · 更新於 2026/09/03</p>
             </div>
           </div>
           <small class="footer-brand">277旅行社共同出品</small>
@@ -2350,7 +2696,7 @@
       <span>已取得新版內容</span>
       <button class="update-now" type="button">立即更新</button>
     </div>
-    <script src="script.js?v=1.33.1"></script>
+    <script src="script.js?v=1.37.0"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js?v=1.31.0"></script>
     <script src="pwa.js?v=1.30.0"></script>
