@@ -6,6 +6,7 @@ const tripStatusEyebrow = tripStatus?.querySelector('[data-trip-status-eyebrow]'
 const tripStatusTitle = tripStatus?.querySelector('[data-trip-status-title]');
 const tripStatusLead = tripStatus?.querySelector('[data-trip-status-lead]');
 const tripStatusWeather = tripStatus?.querySelector('[data-trip-status-weather]');
+const tripPersonalReminder = tripStatus?.querySelector('[data-trip-personal-reminder]');
 const tripStatusActions = tripStatus?.querySelector('[data-trip-status-actions]');
 const tripDayCards = [...document.querySelectorAll('.day-card[data-weather-date]')];
 let activeTripDate = null;
@@ -31,6 +32,33 @@ function previewTripDate() {
 
 function tripAction(hint, label, href, primary = false) {
   return `<a class="trip-status-action${primary ? ' trip-status-action-primary' : ''}" href="${href}"><span>${hint}</span><strong>${label}</strong></a>`;
+}
+
+function pendingPersonalReminders() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('tokyo-trip-personal-tools-v1'));
+    if (!Array.isArray(saved?.reminders)) return 0;
+    return saved.reminders.filter((item) => !item.completed).length;
+  } catch {
+    return 0;
+  }
+}
+
+function updateTripPersonalReminder() {
+  if (!tripPersonalReminder) return;
+  const pending = pendingPersonalReminders();
+  const shouldShow = pending > 0 && ['before', 'during'].includes(tripStatus?.dataset.tripPhase);
+  tripPersonalReminder.hidden = !shouldShow;
+  if (!shouldShow) {
+    tripPersonalReminder.replaceChildren();
+    return;
+  }
+
+  tripPersonalReminder.replaceChildren(
+    document.createTextNode('重要備忘還有 '),
+    Object.assign(document.createElement('strong'), { textContent: String(pending) }),
+    document.createTextNode(' 項待確認哦！快去我的頁面查看～')
+  );
 }
 
 function initializeTripStatus() {
@@ -74,6 +102,7 @@ function initializeTripStatus() {
   }
 
   tripStatus.hidden = false;
+  updateTripPersonalReminder();
 }
 
 window.addEventListener('tripweatherupdate', (event) => {
@@ -95,6 +124,10 @@ tripStatusActions?.addEventListener('click', (event) => {
 });
 
 initializeTripStatus();
+window.addEventListener('pageshow', updateTripPersonalReminder);
+window.addEventListener('storage', (event) => {
+  if (event.key === 'tokyo-trip-personal-tools-v1') updateTripPersonalReminder();
+});
 
 function closeMenu() {
   menuButton.setAttribute('aria-expanded', 'false');
