@@ -8,7 +8,7 @@
     <title>個人頁面｜東京旅行 2026</title>
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="personal-tools.css?v=1.1.0" />
+    <link rel="stylesheet" href="personal-tools.css?v=2.0.2" />
   </head>
   <body>
     <header class="tools-hero">
@@ -67,17 +67,48 @@
       </section>
     </main>
 
-    <footer class="tools-footer">
-      <div class="container tools-footer-inner">
-        <a href="index.html">返回旅行手冊</a>
-        <p><span>版本資訊</span>v1.39.1 · 更新於 2026/09/04</p>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div class="footer-note">
+          <div class="footer-emergency">
+            <span class="footer-label">緊急聯絡</span>
+            <p>日本：<a href="tel:110">110（警察）</a>／<a href="tel:119">119（消防、救護）</a></p>
+          </div>
+          <div class="footer-details">
+            <div class="footer-sources">
+              <span class="footer-label">資料來源</span>
+              <p>匯率：<a href="https://www.exchangerate-api.com" target="_blank" rel="noreferrer">ExchangeRate-API</a><span aria-hidden="true"> · </span>天氣：<a href="https://open-meteo.com/" target="_blank" rel="noreferrer">Open-Meteo</a></p>
+            </div>
+            <div class="footer-version-block">
+              <span class="footer-label">版本資訊</span>
+              <p>v2.0.2 · 更新於 2026/09/04</p>
+            </div>
+          </div>
+          <small class="footer-brand">277旅行社共同出品</small>
+        </div>
       </div>
     </footer>
+    <nav class="mobile-page-nav" aria-label="頁面切換">
+      <a href="index.html">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H11a3 3 0 0 1 3 3v15a3 3 0 0 0-3-3H4V5.5Z" />
+          <path d="M20 5.5A2.5 2.5 0 0 0 17.5 3H14v18a3 3 0 0 1 3-3h3V5.5Z" />
+        </svg>
+        <span>旅行手冊</span>
+      </a>
+      <a href="personal-tools.html" aria-current="page">
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <circle cx="12" cy="8" r="3.5" />
+          <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
+        </svg>
+        <span>個人頁面</span>
+      </a>
+    </nav>
     <div class="save-status" data-save-status role="status" aria-live="polite" hidden></div>
     <div class="update-notice" data-update-notice hidden>
       <span>已取得新版內容</span>
       <button type="button" data-update-now>立即更新</button>
     </div>
-    <script src="personal-tools.js?v=1.1.0"></script>
+    <script src="personal-tools.js?v=2.0.0"></script>
   </body>
 </html>
