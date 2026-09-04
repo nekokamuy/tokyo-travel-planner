@@ -251,6 +251,9 @@ couponFilters.forEach((button) => {
 
 const checklistStorageKey = 'tokyo-trip-preflight-checklist-v1';
 const checklistInputs = document.querySelectorAll('[data-checklist-id]');
+const checklistProgress = document.querySelector('[data-checklist-progress]');
+const checklistProgressBar = document.querySelector('[data-checklist-progress-bar]');
+const checklistProgressText = document.querySelector('[data-checklist-progress-text]');
 let savedChecklist = {};
 
 try {
@@ -259,10 +262,27 @@ try {
   savedChecklist = {};
 }
 
+function updateChecklistProgress() {
+  const total = checklistInputs.length;
+  const completed = [...checklistInputs].filter((input) => input.checked).length;
+  const percentage = total ? Math.round((completed / total) * 100) : 0;
+
+  if (checklistProgressText) checklistProgressText.textContent = `已完成 ${completed}／共 ${total} 項`;
+  if (checklistProgressBar) checklistProgressBar.style.width = `${percentage}%`;
+  if (checklistProgress) {
+    checklistProgress.setAttribute('aria-valuemax', String(total));
+    checklistProgress.setAttribute('aria-valuenow', String(completed));
+    checklistProgress.setAttribute('aria-valuetext', `已完成 ${completed}／共 ${total} 項`);
+  }
+}
+
 checklistInputs.forEach((input) => {
   input.checked = savedChecklist[input.dataset.checklistId] === true;
   input.addEventListener('change', () => {
     savedChecklist[input.dataset.checklistId] = input.checked;
     localStorage.setItem(checklistStorageKey, JSON.stringify(savedChecklist));
+    updateChecklistProgress();
   });
 });
+
+updateChecklistProgress();

@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0d4f55" />
+    <meta name="description" content="東京旅行的個人備忘與自訂清單。" />
+    <title>個人頁面｜東京旅行 2026</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="icon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="personal-tools.css?v=1.1.0" />
+  </head>
+  <body>
+    <header class="tools-hero">
+      <nav class="tools-nav container" aria-label="個人頁面導覽">
+        <a class="brand" href="index.html">TOKYO <span>2026</span></a>
+        <a class="back-link" href="index.html">返回旅行手冊</a>
+      </nav>
+      <div class="container tools-heading">
+        <p class="eyebrow">PERSONAL PAGE</p>
+        <h1>我的個人頁面</h1>
+        <p>這裡是自己安排的旅行空間；內容只會保存在目前這台裝置與瀏覽器中，也可離線使用。</p>
+      </div>
+    </header>
+
+    <main class="container tools-main">
+      <section class="tool-panel" aria-labelledby="reminders-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">REMINDERS</p>
+            <h2 id="reminders-title">重要備忘</h2>
+          </div>
+          <span class="panel-count" data-reminder-count></span>
+        </div>
+        <ul class="editable-list reminder-list" data-reminder-list></ul>
+        <form class="add-form" data-reminder-form>
+          <span class="add-form-label">新增備忘</span>
+          <label class="sr-only" for="reminder-input">新增重要備忘</label>
+          <input id="reminder-input" name="reminder" type="text" maxlength="160" placeholder="輸入需要特別注意的事情…" required />
+          <button type="submit">新增</button>
+        </form>
+      </section>
+
+      <section class="tool-panel" aria-labelledby="lists-title">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">MY LISTS</p>
+            <h2 id="lists-title">我的清單</h2>
+          </div>
+          <span class="panel-count" data-list-count></span>
+        </div>
+        <div class="custom-lists" data-custom-lists></div>
+        <form class="create-list-form" data-create-list-form>
+          <label>
+            <span>清單名稱</span>
+            <input name="title" type="text" maxlength="60" placeholder="例如：伴手禮、藥妝補貨" required />
+          </label>
+          <label>
+            <span>清單類型</span>
+            <select name="type">
+              <option value="checklist">可勾選清單</option>
+              <option value="plain">一般清單</option>
+            </select>
+          </label>
+          <button type="submit">建立清單</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="tools-footer">
+      <div class="container tools-footer-inner">
+        <a href="index.html">返回旅行手冊</a>
+        <p><span>版本資訊</span>v1.39.1 · 更新於 2026/09/04</p>
+      </div>
+    </footer>
+    <div class="save-status" data-save-status role="status" aria-live="polite" hidden></div>
+    <div class="update-notice" data-update-notice hidden>
+      <span>已取得新版內容</span>
+      <button type="button" data-update-now>立即更新</button>
+    </div>
+    <script src="personal-tools.js?v=1.1.0"></script>
+  </body>
+</html>

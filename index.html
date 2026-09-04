@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=1.37.2" />
+    <link rel="stylesheet" href="styles.css?v=1.39.1" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -46,6 +46,10 @@
       <symbol id="icon-checklist" viewBox="0 0 24 24">
         <rect x="4" y="4" width="16" height="16" rx="2" />
         <path d="m8 12 2.5 2.5L16 9" />
+      </symbol>
+      <symbol id="icon-person" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="3.5" />
+        <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
       </symbol>
     </svg>
     <header class="hero" id="top">
@@ -134,6 +138,20 @@
           ><svg aria-hidden="true"><use href="#icon-checklist" /></svg
           >行前確認清單</a
         >
+      </section>
+
+      <section class="container personal-page-entry" aria-labelledby="personal-page-title">
+        <div class="personal-page-card">
+          <div class="personal-page-copy">
+            <p class="eyebrow">PERSONAL PAGE</p>
+            <h2 id="personal-page-title">自己的旅行空間</h2>
+            <p>整理只屬於你的備忘與清單。</p>
+          </div>
+          <a class="trip-status-action" href="personal-tools.html">
+            <span>重要備忘與自訂清單</span>
+            <strong>開啟個人頁面</strong>
+          </a>
+        </div>
       </section>
 
       <section class="container travel-tools" aria-label="旅遊小工具">
@@ -2458,6 +2476,15 @@
           </div>
           <div class="info-grid info-grid-single">
             <article>
+              <div class="checklist-progress" aria-live="polite">
+                <div class="checklist-progress-copy">
+                  <span>準備進度</span>
+                  <strong data-checklist-progress-text>已完成 0／共 0 項</strong>
+                </div>
+                <div class="checklist-progress-track" role="progressbar" aria-label="行前確認清單完成度" aria-valuemin="0" aria-valuemax="0" aria-valuenow="0" data-checklist-progress>
+                  <span data-checklist-progress-bar></span>
+                </div>
+              </div>
               <div class="checklist-groups">
                 <section class="checklist-group">
                   <h4>✈️ 證件與航班</h4>
@@ -2643,7 +2670,7 @@
             </div>
             <div class="footer-version-block">
               <span class="footer-label">版本資訊</span>
-              <p>v1.37.2 · 更新於 2026/09/03</p>
+              <p>v1.39.1 · 更新於 2026/09/04</p>
             </div>
           </div>
           <small class="footer-brand">277旅行社共同出品</small>
@@ -2696,7 +2723,7 @@
       <span>已取得新版內容</span>
       <button class="update-now" type="button">立即更新</button>
     </div>
-    <script src="script.js?v=1.37.0"></script>
+    <script src="script.js?v=1.39.0"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js?v=1.31.0"></script>
     <script src="pwa.js?v=1.30.0"></script>
