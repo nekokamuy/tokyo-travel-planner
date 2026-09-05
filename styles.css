@@ -244,15 +244,15 @@ a { color:inherit; text-underline-offset:3px; }
 
 /* Airport rail ticket details */
 .ticket-list > .transport-ticket-entry { padding-block:10px; }
-.transport-ticket-details { overflow:hidden; border:1px solid var(--line); border-radius:8px; background:#fffdf8; }
-.transport-ticket-details > summary { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 15px; background:#e7ece8; cursor:pointer; list-style:none; }
+.transport-ticket-summary { margin-top:4px; }
+.transport-ticket-details { margin:9px 0 0 1.1rem; padding-left:10px; border-left:2px solid #bfcac4; }
+.transport-ticket-details > summary { display:inline-flex; align-items:center; gap:6px; padding:4px 1px; color:#536669; background:transparent; font-size:.8rem; font-weight:500; cursor:pointer; list-style:none; }
 .transport-ticket-details > summary::-webkit-details-marker { display:none; }
-.transport-ticket-details > summary strong { color:#405b5e; font-size:.9rem; font-weight:600; }
-.transport-ticket-details > summary small { display:block; margin-top:3px; color:var(--muted); font-size:.76rem; }
-.transport-ticket-chevron { flex:none; color:var(--muted); font-size:1rem; transition:transform .2s; }
-.transport-ticket-details[open] .transport-ticket-chevron { transform:rotate(180deg); }
-.transport-ticket-details[open] > summary { border-bottom:1px solid var(--line); background:#dfe7e2; }
-.transport-ticket-body { padding:5px 17px 17px; }
+.transport-ticket-chevron { flex:none; color:var(--muted); font-size:.58rem; line-height:1; }
+.transport-ticket-details[open] .transport-ticket-chevron { font-size:0; }
+.transport-ticket-details[open] .transport-ticket-chevron::after { content:"▲"; font-size:.58rem; }
+.transport-ticket-details[open] > summary { color:var(--teal); }
+.transport-ticket-body { padding:3px 10px 10px 1px; }
 .transport-ticket-body section { padding-top:15px; }
 .transport-ticket-body section + section { margin-top:15px; border-top:1px dashed var(--line); }
 .transport-ticket-body h5 { margin:0 0 7px; color:var(--teal); font-size:.8rem; font-weight:700; }
@@ -270,8 +270,8 @@ a { color:inherit; text-underline-offset:3px; }
 .ticket-dialog-entry.transport-ticket-body { padding:0; }
 .ticket-dialog-entry.transport-ticket-body section:first-child { padding-top:0; }
 @media (max-width:620px) {
-  .transport-ticket-details > summary { padding:13px 12px; }
-  .transport-ticket-body { padding:3px 13px 15px; }
+  .transport-ticket-details > summary { padding-block:6px; }
+  .transport-ticket-body { padding:2px 5px 8px 1px; }
   .transport-times li { gap:9px; }
 }
 

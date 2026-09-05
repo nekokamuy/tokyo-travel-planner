@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=2.3.3" />
+    <link rel="stylesheet" href="styles.css?v=2.3.5" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -290,7 +290,12 @@
                     </li>
                     <li>
                       前往東京市區
-                      <a class="ticket-link" href="#ticket-nex" data-ticket-sections="shared outbound references">查看車票資訊</a>
+                      <a
+                        class="ticket-link"
+                        href="#ticket-nex"
+                        data-ticket-sections="shared outbound references"
+                        >查看車票資訊</a
+                      >
                     </li>
                   </ul>
                 </div>
@@ -1982,7 +1987,12 @@
                   <ul class="schedule-list">
                     <li>
                       前往機場
-                      <a class="ticket-link" href="#ticket-nex" data-ticket-sections="shared inbound references">查看車票資訊</a>
+                      <a
+                        class="ticket-link"
+                        href="#ticket-nex"
+                        data-ticket-sections="shared inbound references"
+                        >查看車票資訊</a
+                      >
                     </li>
                     <li>辦理登機</li>
                   </ul>
@@ -2107,14 +2117,16 @@
               <h4 class="ticket-category">↔ 車票類</h4>
               <ul class="ticket-list">
                 <li class="transport-ticket-entry">
+                  <strong>機場與市區來回</strong>
+                  <ul class="ticket-meta transport-ticket-summary">
+                    <li>方式：Narita Express（N'EX）成田機場 ⇄ 東京車站（直達）</li>
+                    <li>購票：現場購票</li>
+                  </ul>
                   <details class="transport-ticket-details" id="ticket-nex">
                     <summary>
-                      <span>
-                        <strong>成田機場 ⇄ 東京車站｜N'EX 搭乘資訊</strong>
-                        <small>N'EX 東京去回車票 · 現場購票</small>
-                      </span>
+                      查看 N'EX 詳細搭乘資訊
                       <span class="transport-ticket-chevron" aria-hidden="true"
-                        >⌄</span
+                        >▼</span
                       >
                     </summary>
                     <div class="transport-ticket-body">
@@ -2133,7 +2145,7 @@
                       <section data-ticket-section="outbound">
                         <h5>✈️ 去程｜9/9 成田機場 T1 → 東京車站</h5>
                         <p class="transport-flight">
-                          BR108 預計 11:45 抵達成田第一航廈
+                          預計 11:45 抵達成田第一航廈
                         </p>
                         <ul class="ticket-meta transport-times">
                           <li>
@@ -2152,7 +2164,7 @@
                       </section>
                       <section data-ticket-section="inbound">
                         <h5>✈️ 回程｜9/14 東京車站 → 成田機場 T1</h5>
-                        <p class="transport-flight">BR107 12:45 起飛</p>
+                        <p class="transport-flight">預計 12:45 起飛</p>
                         <ul class="ticket-meta transport-times">
                           <li>
                             <strong>N'EX 9</strong><span>08:30 → 09:29</span>
@@ -2755,7 +2767,7 @@
             </div>
             <div class="footer-version-block">
               <span class="footer-label">版本資訊</span>
-              <p>v2.3.3 · 更新於 2026/09/05</p>
+              <p>v2.3.5 · 更新於 2026/09/05</p>
             </div>
           </div>
           <small class="footer-brand">277旅行社共同出品</small>
