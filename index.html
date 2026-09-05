@@ -16,7 +16,7 @@
     <link rel="manifest" href="manifest.webmanifest" />
     <link rel="icon" href="icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="icon.svg" />
-    <link rel="stylesheet" href="styles.css?v=2.2.0" />
+    <link rel="stylesheet" href="styles.css?v=2.3.3" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -170,7 +170,12 @@
                 <strong data-trip-weather-summary>天氣載入中</strong>
                 <span data-trip-weather-location></span>
               </div>
-              <a class="trip-personal-reminder" href="personal-tools.html" data-trip-personal-reminder hidden></a>
+              <a
+                class="trip-personal-reminder"
+                href="personal-tools.html"
+                data-trip-personal-reminder
+                hidden
+              ></a>
             </div>
             <div class="trip-status-actions" data-trip-status-actions></div>
           </div>
@@ -283,7 +288,10 @@
                         >開啟地圖</a
                       >
                     </li>
-                    <li>前往東京市區</li>
+                    <li>
+                      前往東京市區
+                      <a class="ticket-link" href="#ticket-nex" data-ticket-sections="shared outbound references">查看車票資訊</a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -1089,9 +1097,13 @@
                     <div class="schedule-content">
                       <strong>調布花火（彈性行程）</strong>
                       <ul class="schedule-list">
-                        <li>稻田公園／多摩川河岸遠觀調布花火（18:15～19:15）</li>
+                        <li>
+                          稻田公園／多摩川河岸遠觀調布花火（18:15～19:15）
+                        </li>
                       </ul>
-                      <p class="travel-note">看完夕陽再前往，預計只能看到煙火後半段；若當天行程延誤則直接取消煙火。</p>
+                      <p class="travel-note">
+                        看完夕陽再前往，預計只能看到煙火後半段；若當天行程延誤則直接取消煙火。
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1143,9 +1155,13 @@
                     <div class="schedule-content">
                       <strong>調布花火</strong>
                       <ul class="schedule-list">
-                        <li>稻田公園／多摩川河岸遠觀調布花火（18:15～19:15）</li>
+                        <li>
+                          稻田公園／多摩川河岸遠觀調布花火（18:15～19:15）
+                        </li>
                       </ul>
-                      <p class="travel-note">若當天天氣不佳、沒有夕陽可看，採此版本，提早離開江之島前往煙火觀賞點。</p>
+                      <p class="travel-note">
+                        若當天天氣不佳、沒有夕陽可看，採此版本，提早離開江之島前往煙火觀賞點。
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -1964,7 +1980,10 @@
                 <div class="schedule-content">
                   <strong>班機返台</strong>
                   <ul class="schedule-list">
-                    <li>前往機場</li>
+                    <li>
+                      前往機場
+                      <a class="ticket-link" href="#ticket-nex" data-ticket-sections="shared inbound references">查看車票資訊</a>
+                    </li>
                     <li>辦理登機</li>
                   </ul>
                 </div>
@@ -2087,26 +2106,104 @@
             <div class="ticket-group">
               <h4 class="ticket-category">↔ 車票類</h4>
               <ul class="ticket-list">
-                <li>
-                  <strong>機場與市區來回</strong>
-                  <ul class="ticket-meta">
-                    <li>
-                      狀態：待確認
-                      <span
-                        class="status-mark status-pending"
-                        role="img"
-                        aria-label="待確認"
-                        >!</span
+                <li class="transport-ticket-entry">
+                  <details class="transport-ticket-details" id="ticket-nex">
+                    <summary>
+                      <span>
+                        <strong>成田機場 ⇄ 東京車站｜N'EX 搭乘資訊</strong>
+                        <small>N'EX 東京去回車票 · 現場購票</small>
+                      </span>
+                      <span class="transport-ticket-chevron" aria-hidden="true"
+                        >⌄</span
                       >
-                    </li>
-                    <li>
-                      預計：搭乘 Narita Express（N'EX）成田機場 ⇄
-                      東京車站（直達）
-                    </li>
-                    <li>
-                      注意：全車皆為指定席，可以到機場後再買，通常都有位子，但建議先買比較安心。
-                    </li>
-                  </ul>
+                    </summary>
+                    <div class="transport-ticket-body">
+                      <section data-ticket-section="shared">
+                        <h5>🎫 車票</h5>
+                        <ul class="ticket-meta">
+                          <li>票券：N'EX 東京去回車票</li>
+                          <li>票價：成人 ¥5,200／人</li>
+                          <li>有效期限：14 天內，來回各搭乘 1 次</li>
+                          <li>座位：普通車廂指定席</li>
+                          <li>購買地點：成田機場第 1 航廈 B1F JR 車站</li>
+                          <li>可使用附護照讀取器的指定席售票機購買</li>
+                          <li>購買時需讀取每位乘客本人的 IC 晶片護照</li>
+                        </ul>
+                      </section>
+                      <section data-ticket-section="outbound">
+                        <h5>✈️ 去程｜9/9 成田機場 T1 → 東京車站</h5>
+                        <p class="transport-flight">
+                          BR108 預計 11:45 抵達成田第一航廈
+                        </p>
+                        <ul class="ticket-meta transport-times">
+                          <li>
+                            <strong>N'EX 26</strong><span>13:44 → 14:45</span>
+                          </li>
+                          <li>
+                            <strong>N'EX 28</strong><span>14:20 → 15:15</span>
+                          </li>
+                          <li>
+                            <strong>N'EX 30</strong><span>14:46 → 15:45</span>
+                          </li>
+                        </ul>
+                        <p class="transport-note">
+                          入境、領行李後，再依實際時間選擇適合班次並劃指定席。
+                        </p>
+                      </section>
+                      <section data-ticket-section="inbound">
+                        <h5>✈️ 回程｜9/14 東京車站 → 成田機場 T1</h5>
+                        <p class="transport-flight">BR107 12:45 起飛</p>
+                        <ul class="ticket-meta transport-times">
+                          <li>
+                            <strong>N'EX 9</strong><span>08:30 → 09:29</span>
+                          </li>
+                          <li class="is-recommended">
+                            <strong>N'EX 11 <b>推薦</b></strong
+                            ><span>09:00 → 09:58</span>
+                          </li>
+                          <li>
+                            <strong>N'EX 13</strong><span>09:30 → 10:28</span>
+                          </li>
+                        </ul>
+                        <p class="transport-note">
+                          推薦 N'EX 11號，09:58 抵達成田，距離起飛約 2 小時 47
+                          分。
+                        </p>
+                        <p class="transport-note">
+                          回程指定席可事先於 JR 指定席售票機劃位。
+                        </p>
+                      </section>
+                      <section data-ticket-section="references">
+                        <h5>🔗 參考網站</h5>
+                        <ul class="ticket-meta transport-links">
+                          <li>
+                            <a
+                              href="https://tokyo.letsgojp.com/archives/806704/"
+                              target="_blank"
+                              rel="noreferrer"
+                              >樂吃購｜N'EX 購票＆搭乘教學</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.jreast.co.jp/zh-CHT/multi/pass/nex.html"
+                              target="_blank"
+                              rel="noreferrer"
+                              >JR 東日本｜N'EX 東京去回車票</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="https://www.jreast.co.jp/tc/downloads/pdf/passport_operation_tc.pdf"
+                              target="_blank"
+                              rel="noreferrer"
+                              >JR 東日本｜護照讀取售票機操作教學</a
+                            >
+                          </li>
+                        </ul>
+                      </section>
+                    </div>
+                  </details>
                 </li>
                 <li>
                   <strong>鎌倉／江之島來回</strong>
@@ -2658,7 +2755,7 @@
             </div>
             <div class="footer-version-block">
               <span class="footer-label">版本資訊</span>
-              <p>v2.2.0 · 更新於 2026/09/05</p>
+              <p>v2.3.3 · 更新於 2026/09/05</p>
             </div>
           </div>
           <small class="footer-brand">277旅行社共同出品</small>
@@ -2729,7 +2826,7 @@
       <span>已取得新版內容</span>
       <button class="update-now" type="button">立即更新</button>
     </div>
-    <script src="script.js?v=2.0.4"></script>
+    <script src="script.js?v=2.3.2"></script>
     <script src="exchange-rate.js"></script>
     <script src="weather.js?v=1.31.0"></script>
     <script src="pwa.js?v=1.30.0"></script>

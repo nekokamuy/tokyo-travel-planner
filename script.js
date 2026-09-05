@@ -188,7 +188,16 @@ document.querySelectorAll('.ticket-link').forEach((link) => {
     if (!ticketDialog?.showModal || !ticketDialogContent) return;
 
     event.preventDefault();
-    const content = target.cloneNode(true);
+    let content = target.cloneNode(true);
+    const requestedSections = link.dataset.ticketSections?.split(/\s+/).filter(Boolean);
+    if (requestedSections?.length) {
+      content.querySelectorAll('[data-ticket-section]').forEach((section) => {
+        if (!requestedSections.includes(section.dataset.ticketSection)) section.remove();
+      });
+      if (content.matches('details')) {
+        content = content.querySelector('.transport-ticket-body') || content;
+      }
+    }
     content.removeAttribute('id');
     content.querySelector('.ticket-return')?.remove();
     content.querySelectorAll('[id]').forEach((element) => element.removeAttribute('id'));

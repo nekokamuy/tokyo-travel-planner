@@ -242,6 +242,39 @@ a { color:inherit; text-underline-offset:3px; }
 .tower-sublist li + li { margin-top:3px; }
 .itinerary-footer-actions { display:flex; justify-content:flex-end; margin-top:12px; }
 
+/* Airport rail ticket details */
+.ticket-list > .transport-ticket-entry { padding-block:10px; }
+.transport-ticket-details { overflow:hidden; border:1px solid var(--line); border-radius:8px; background:#fffdf8; }
+.transport-ticket-details > summary { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 15px; background:#e7ece8; cursor:pointer; list-style:none; }
+.transport-ticket-details > summary::-webkit-details-marker { display:none; }
+.transport-ticket-details > summary strong { color:#405b5e; font-size:.9rem; font-weight:600; }
+.transport-ticket-details > summary small { display:block; margin-top:3px; color:var(--muted); font-size:.76rem; }
+.transport-ticket-chevron { flex:none; color:var(--muted); font-size:1rem; transition:transform .2s; }
+.transport-ticket-details[open] .transport-ticket-chevron { transform:rotate(180deg); }
+.transport-ticket-details[open] > summary { border-bottom:1px solid var(--line); background:#dfe7e2; }
+.transport-ticket-body { padding:5px 17px 17px; }
+.transport-ticket-body section { padding-top:15px; }
+.transport-ticket-body section + section { margin-top:15px; border-top:1px dashed var(--line); }
+.transport-ticket-body h5 { margin:0 0 7px; color:var(--teal); font-size:.8rem; font-weight:700; }
+.transport-ticket-body .ticket-meta { margin-top:0; font-size:.8rem; line-height:1.55; }
+.transport-flight { margin:0 0 6px; color:#405b5e; font-size:.8rem; }
+.transport-times { padding-left:0; list-style:none; }
+.transport-times li { display:flex; align-items:baseline; justify-content:space-between; gap:14px; padding:4px 0; border-top:1px solid #d9d7ce80; }
+.transport-times li:first-child { border-top:0; }
+.ticket-list .transport-times strong { display:inline; color:#536669; font-size:.8rem; font-weight:600; }
+.transport-times span { flex:none; font-variant-numeric:tabular-nums; }
+.transport-times b { margin-left:4px; color:var(--accent); font-size:.72rem; font-weight:700; }
+.transport-note { margin:7px 0 0; color:var(--muted); font-size:.78rem; line-height:1.55; }
+.transport-links { padding-left:0; list-style:none; }
+.info-grid .transport-links a { color:#bf745f; font-size:.8rem; font-weight:400; text-decoration-thickness:1px; text-underline-offset:2px; }
+.ticket-dialog-entry.transport-ticket-body { padding:0; }
+.ticket-dialog-entry.transport-ticket-body section:first-child { padding-top:0; }
+@media (max-width:620px) {
+  .transport-ticket-details > summary { padding:13px 12px; }
+  .transport-ticket-body { padding:3px 13px 15px; }
+  .transport-times li { gap:9px; }
+}
+
 /* D4 weather-based itinerary options */
 .day-plan-options { display:grid; gap:10px; margin:12px 4px 26px 118px; }
 .day-plan-card { overflow:hidden; border:1px solid var(--line); border-radius:8px; background:#fffdf8; }
