@@ -113,6 +113,8 @@
             renderReminders();
           }),
           actionButton("刪除", "delete-button", () => {
+            if (!window.confirm(`確定要刪除重要備忘「${item.text}」嗎？`))
+              return;
             data.reminders = data.reminders.filter(
               (entry) => entry.id !== item.id,
             );
@@ -162,6 +164,8 @@
         renderLists();
       }),
       actionButton("刪除", "delete-button", () => {
+        if (!window.confirm(`確定要刪除清單項目「${item.text}」嗎？`))
+          return;
         list.items = list.items.filter((entry) => entry.id !== item.id);
         save();
         renderLists();
@@ -211,6 +215,16 @@
           save();
           renderLists();
         }),
+        actionButton(
+          list.type === "checklist" ? "改為一般清單" : "改為可勾選清單",
+          "",
+          () => {
+            list.type = list.type === "checklist" ? "plain" : "checklist";
+            openLists.add(list.id);
+            save();
+            renderLists();
+          },
+        ),
         actionButton("刪除清單", "delete-button", () => {
           if (!window.confirm(`確定刪除「${list.title}」及其中所有項目？`))
             return;
