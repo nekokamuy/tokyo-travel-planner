@@ -242,6 +242,38 @@ a { color:inherit; text-underline-offset:3px; }
 .tower-sublist li + li { margin-top:3px; }
 .itinerary-footer-actions { display:flex; justify-content:flex-end; margin-top:12px; }
 
+/* D4 weather-based itinerary options */
+.day-plan-options { display:grid; gap:10px; margin:12px 4px 26px 118px; }
+.day-plan-card { overflow:hidden; border:1px solid var(--line); border-radius:8px; background:#fffdf8; }
+.day-card .day-plan-card > summary,.day-card[open] .day-plan-card > summary,.day-card .day-plan-card > summary:hover {
+  display:grid;
+  grid-template-columns:72px minmax(0,1fr) 18px;
+  gap:12px;
+  align-items:center;
+  margin:0;
+  padding:14px 16px;
+  border-radius:0;
+  background:#f5f2eb;
+  cursor:pointer;
+  list-style:none;
+}
+.day-card .day-plan-card > summary::-webkit-details-marker { display:none; }
+.day-plan-card[open] > summary { border-bottom:1px solid var(--line); }
+.day-plan-condition { color:var(--accent); font-size:.7rem; font-weight:700; letter-spacing:.06em; }
+.day-card .day-plan-card > summary strong { color:#405b5e; font-size:.92rem; font-weight:600; }
+.day-card .day-plan-card > summary small { color:var(--muted); font-size:.72rem; font-weight:400; }
+.day-plan-chevron { color:var(--muted); font-size:1rem; text-align:right; transition:transform .2s; }
+.day-plan-card[open] .day-plan-chevron { transform:rotate(180deg); }
+.day-plan-card .schedule { padding:5px 18px 15px; }
+.day-plan-card .schedule > div { grid-template-columns:64px minmax(0,1fr); }
+.day-plan-card .travel-note { margin-top:10px; }
+@media (max-width:620px) {
+  .day-plan-options { margin:10px 0 24px; }
+  .day-card .day-plan-card > summary,.day-card[open] .day-plan-card > summary,.day-card .day-plan-card > summary:hover { grid-template-columns:58px minmax(0,1fr) 16px; gap:8px; padding:12px 11px; }
+  .day-plan-card .schedule { padding:4px 12px 13px; }
+  .day-plan-card .schedule > div { grid-template-columns:54px minmax(0,1fr); gap:9px; }
+}
+
 /* Mobile page navigation */
 .mobile-page-nav { display:none; }
 @media (max-width:620px) {
